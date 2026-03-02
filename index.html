@@ -4,16 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Codex Spectrum</title>
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
+/* Reset & body */
+* {
+  box-sizing: border-box;
+}
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding-top: 70px;
-  line-height: 1.6;
-  background-color: #f5f5f5;
+  background-color: #f2f4f8;
   color: #222;
+  line-height: 1.6;
 }
 
+/* Header */
 header {
   position: fixed;
   top: 0;
@@ -22,70 +29,104 @@ header {
   background-color: #1a1a1a;
   color: white;
   padding: 15px 30px;
-  font-size: 1.2em;
-  font-weight: bold;
+  font-size: 1.3em;
+  font-weight: 700;
   z-index: 1000;
   text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
+/* Main content */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 40px;
+}
+
+/* Headings */
 h1 {
-  font-size: 2em;
+  font-size: 2.2em;
   margin: 20px 0 10px;
   text-align: center;
 }
-
 h2 {
-  font-size: 1.5em;
+  font-size: 1.6em;
   margin-top: 30px;
 }
-
 h3 {
   font-size: 1.2em;
   margin-top: 20px;
-  font-weight: normal;
+  font-weight: 600;
   color: #555;
 }
 
+/* Paragraphs & lists */
 p {
   margin: 10px 0 20px;
 }
-
 ul {
   margin: 10px 0 20px 40px;
+  list-style-type: disc;
 }
 
+/* Cards for sections */
+.card {
+  background: white;
+  padding: 20px 25px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+/* Buttons */
 .btn {
   display: inline-block;
   margin: 10px 10px 20px 0;
-  padding: 12px 24px;
+  padding: 14px 28px;
   background-color: #4CAF50;
   color: white;
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: none;
-  border-radius: 6px;
-  transition: background-color 0.3s;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
 }
-
 .btn:hover {
   background-color: #45a049;
+  transform: scale(1.05);
 }
 
+/* Navigation area */
 nav {
   margin: 20px 0;
   text-align: center;
 }
 
-main {
-  padding: 20px 40px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
+/* Footer */
 footer {
   text-align: center;
   font-size: 0.8em;
   color: #888;
   margin: 40px 0 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  main {
+    padding: 15px 20px;
+  }
+  header {
+    font-size: 1.1em;
+    padding: 12px 15px;
+  }
+  .btn {
+    padding: 12px 20px;
+    margin: 8px 5px 15px 0;
+  }
 }
 </style>
 </head>
@@ -97,20 +138,26 @@ footer {
   <h1>The Codex Spectrum</h1>
   <h3>Elite-centric. Objective thresholds. B2B & Individual Frameworks.</h3>
 
-  <h2>1. The Core Philosophy</h2>
-  <p>The Codex consists of specialized Doctrines governing vocal and electronic communication.</p>
-  <p>Assessments are conducted within Proprietary Assessment Cabins—high-security environments by utilising the Safe Exam Browser (SEB). We secure the environment, not the person. Zero cameras. Zero biometrics.</p>
+  <div class="card">
+    <h2>1. The Core Philosophy</h2>
+    <p>The Codex consists of specialized Doctrines governing vocal and electronic communication.</p>
+    <p>Assessments are conducted within Proprietary Assessment Cabins—high-security environments by utilising the Safe Exam Browser (SEB). We secure the environment, not the person. Zero cameras. Zero biometrics.</p>
+  </div>
 
-  <h2>2. The Templates</h2>
-  <p>Select a framework designed for your specific objective:</p>
-  <ul>
-    <li>The Corporate: Vocal and electronic communicative demands of high-level business.</li>
-    <li>The Medic: Precision communication within clinical and healthcare environments with the capability to explain to patients.</li>
-    <li>The Linguist: Advanced mastery of the English framework and structural logic.</li>
-  </ul>
+  <div class="card">
+    <h2>2. The Templates</h2>
+    <p>Select a framework designed for your specific objective:</p>
+    <ul>
+      <li>The Corporate: Vocal and electronic communicative demands of high-level business.</li>
+      <li>The Medic: Precision communication within clinical and healthcare environments with the capability to explain to patients.</li>
+      <li>The Linguist: Advanced mastery of the English framework and structural logic.</li>
+    </ul>
+  </div>
 
-  <h2>3. The Integrity Rule</h2>
-  <p>Note on Integrity: To maintain the objective validity of the Codex, the OPC retains sole authority over Doctrine selection. We do not provide “customised” tests that dilute the framework’s standards.</p>
+  <div class="card">
+    <h2>3. The Integrity Rule</h2>
+    <p>Note on Integrity: To maintain the objective validity of the Codex, the OPC retains sole authority over Doctrine selection. We do not provide “customised” tests that dilute the framework’s standards.</p>
+  </div>
 
   <h3>Navigation</h3>
   <nav>
