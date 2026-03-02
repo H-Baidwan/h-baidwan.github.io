@@ -4,39 +4,45 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Codex Spectrum</title>
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-/* Reset & body */
-* {
-  box-sizing: border-box;
-}
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Body */
 body {
   font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding-top: 70px;
-  background-color: #f2f4f8;
+  background: linear-gradient(to right, #f2f4f8, #e6ebf2);
   color: #222;
   line-height: 1.6;
+  padding-top: 70px;
+  overflow-x: hidden;
 }
 
-/* Header */
+/* Sticky header */
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #1a1a1a;
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
   color: white;
   padding: 15px 30px;
   font-size: 1.3em;
   font-weight: 700;
-  z-index: 1000;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: all 0.3s;
 }
 
-/* Main content */
+/* Shrink header on scroll */
+header.shrink {
+  padding: 8px 20px;
+  font-size: 1.1em;
+}
+
+/* Main container */
 main {
   max-width: 1000px;
   margin: 0 auto;
@@ -45,62 +51,83 @@ main {
 
 /* Headings */
 h1 {
-  font-size: 2.2em;
-  margin: 20px 0 10px;
+  font-size: 2.4em;
+  margin-bottom: 10px;
   text-align: center;
+  color: #1a1a1a;
+  animation: fadeInDown 1s ease forwards;
+}
+h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #555;
+  font-weight: 400;
+  animation: fadeInUp 1s ease forwards;
 }
 h2 {
   font-size: 1.6em;
   margin-top: 30px;
+  color: #333;
 }
-h3 {
+h3.section {
   font-size: 1.2em;
-  margin-top: 20px;
   font-weight: 600;
-  color: #555;
+  margin-top: 20px;
+  color: #666;
 }
 
-/* Paragraphs & lists */
-p {
-  margin: 10px 0 20px;
-}
-ul {
-  margin: 10px 0 20px 40px;
-  list-style-type: disc;
-}
+/* Paragraphs */
+p { margin: 10px 0 20px; }
 
-/* Cards for sections */
+/* Lists */
+ul { margin: 10px 0 20px 40px; }
+
+/* Cards */
 .card {
   background: white;
-  padding: 20px 25px;
+  padding: 25px 30px;
   margin: 20px 0;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.4s, box-shadow 0.4s;
+  position: relative;
+  overflow: hidden;
 }
 .card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
 }
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 60%);
+  transform: skewX(-25deg);
+  transition: all 0.5s;
+}
+.card:hover::before { left: 100%; }
 
 /* Buttons */
 .btn {
   display: inline-block;
   margin: 10px 10px 20px 0;
   padding: 14px 28px;
-  background-color: #4CAF50;
+  background: linear-gradient(135deg, #4CAF50, #43a047);
   color: white;
   font-weight: 600;
   text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.3s, transform 0.2s;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 .btn:hover {
-  background-color: #45a049;
   transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
-/* Navigation area */
+/* Navigation */
 nav {
   margin: 20px 0;
   text-align: center;
@@ -114,25 +141,27 @@ footer {
   margin: 40px 0 20px;
 }
 
-/* Responsive adjustments */
+/* Animations */
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  main {
-    padding: 15px 20px;
-  }
-  header {
-    font-size: 1.1em;
-    padding: 12px 15px;
-  }
-  .btn {
-    padding: 12px 20px;
-    margin: 8px 5px 15px 0;
-  }
+  main { padding: 15px 20px; }
+  header { font-size: 1.1em; padding: 10px 15px; }
+  .btn { padding: 12px 20px; margin: 8px 5px 15px 0; }
 }
 </style>
 </head>
 <body>
 
-<header>The Codex Spectrum</header>
+<header id="pageHeader">The Codex Spectrum</header>
 
 <main>
   <h1>The Codex Spectrum</h1>
@@ -159,7 +188,7 @@ footer {
     <p>Note on Integrity: To maintain the objective validity of the Codex, the OPC retains sole authority over Doctrine selection. We do not provide “customised” tests that dilute the framework’s standards.</p>
   </div>
 
-  <h3>Navigation</h3>
+  <h3 class="section">Navigation</h3>
   <nav>
     <a href="business.html" class="btn">I am a Business Representative</a>
     <a href="individual.html" class="btn">I am an Individual</a>
@@ -168,6 +197,15 @@ footer {
 </main>
 
 <footer>&copy; 2026 H-baidwan, All Rights Reserved.</footer>
+
+<script>
+// Shrink header on scroll
+window.addEventListener("scroll", function() {
+  const header = document.getElementById("pageHeader");
+  if (window.scrollY > 50) header.classList.add("shrink");
+  else header.classList.remove("shrink");
+});
+</script>
 
 </body>
 </html>
