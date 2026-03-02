@@ -6,10 +6,7 @@
 <title>The Codex Spectrum</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-/* Reset */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
-/* Body */
 body {
   font-family: 'Inter', sans-serif;
   background: linear-gradient(to right, #f2f4f8, #e6ebf2);
@@ -19,7 +16,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Sticky header */
+/* Header */
 header {
   position: fixed;
   top: 0;
@@ -35,14 +32,9 @@ header {
   z-index: 1000;
   transition: all 0.3s;
 }
+header.shrink { padding: 8px 20px; font-size: 1.1em; }
 
-/* Shrink header on scroll */
-header.shrink {
-  padding: 8px 20px;
-  font-size: 1.1em;
-}
-
-/* Main container */
+/* Main content */
 main {
   max-width: 1000px;
   margin: 0 auto;
@@ -50,53 +42,34 @@ main {
 }
 
 /* Headings */
-h1 {
-  font-size: 2.4em;
-  margin-bottom: 10px;
-  text-align: center;
-  color: #1a1a1a;
-  animation: fadeInDown 1s ease forwards;
-}
-h3 {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #555;
-  font-weight: 400;
-  animation: fadeInUp 1s ease forwards;
-}
-h2 {
-  font-size: 1.6em;
-  margin-top: 30px;
-  color: #333;
-}
-h3.section {
-  font-size: 1.2em;
-  font-weight: 600;
-  margin-top: 20px;
-  color: #666;
-}
+h1 { font-size: 2.4em; margin-bottom: 10px; text-align: center; color: #1a1a1a; animation: fadeInDown 1s ease forwards; }
+h3 { text-align: center; margin-bottom: 30px; color: #555; font-weight: 400; animation: fadeInUp 1s ease forwards; }
+h2 { font-size: 1.6em; margin-top: 30px; color: #333; }
+h3.section { font-size: 1.2em; font-weight: 600; margin-top: 20px; color: #666; }
 
 /* Paragraphs */
 p { margin: 10px 0 20px; }
-
-/* Lists */
 ul { margin: 10px 0 20px 40px; }
 
-/* Cards */
+/* Animated Gradient Cards */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 .card {
-  background: white;
   padding: 25px 30px;
   margin: 20px 0;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  transition: transform 0.4s, box-shadow 0.4s;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+  background-size: 800% 800%;
+  animation: gradientShift 15s ease infinite;
+  transition: transform 0.4s, box-shadow 0.4s;
 }
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
-}
+.card:hover { transform: translateY(-5px); box-shadow: 0 12px 28px rgba(0,0,0,0.15); }
 .card::before {
   content: "";
   position: absolute;
@@ -122,34 +95,17 @@ ul { margin: 10px 0 20px 40px; }
   border-radius: 10px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-}
+.btn:hover { transform: scale(1.05); box-shadow: 0 8px 15px rgba(0,0,0,0.2); }
 
 /* Navigation */
-nav {
-  margin: 20px 0;
-  text-align: center;
-}
+nav { margin: 20px 0; text-align: center; }
 
 /* Footer */
-footer {
-  text-align: center;
-  font-size: 0.8em;
-  color: #888;
-  margin: 40px 0 20px;
-}
+footer { text-align: center; font-size: 0.8em; color: #888; margin: 40px 0 20px; }
 
 /* Animations */
-@keyframes fadeInDown {
-  0% { opacity: 0; transform: translateY(-20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
+@keyframes fadeInDown { 0% { opacity: 0; transform: translateY(-20px); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInUp { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
 
 /* Responsive */
 @media (max-width: 768px) {
