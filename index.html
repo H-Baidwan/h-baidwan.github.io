@@ -68,9 +68,11 @@ ul { margin: 10px 0 20px 40px; }
 
 /* Centralise only the Protocol heading */
 .card h3 {
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 20px;
+  display: block;           /* ensure heading is treated as a full-width block */
+  width: 100%;              /* stretch across the card */
+  text-align: center;       /* horizontal centering */
+  margin: 0 auto 20px auto; /* top 0, bottom 20px, auto left/right */
+  line-height: 1.4;         /* optional: smooth vertical alignment */
 }
 
 /* Buttons */
