@@ -1,2 +1,2 @@
-# h-baidwan.github.io
+# thecodexsspectrum.github.io
 Official website for The Codex's Spectrum.
