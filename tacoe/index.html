@@ -4,234 +4,181 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Terms & Conditions of Engagement — The Codex's Spectrum</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(to right, #f2f4f8, #e6ebf2);
+  color: #222;
+  padding-top: 80px;
+  overflow-x: hidden;
+}
 
-  :root {
-    --navy: #1e3c72;
-    --navy-dark: #152d57;
-    --navy-light: #2a5298;
-    --accent: #c9a84c;
-    --text: #1a1a1a;
-    --muted: #555;
-    --bg: #f5f5f0;
-    --white: #ffffff;
-    --border: #d0d0c8;
-  }
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  padding: 20px 30px;
+  font-size: 1.3em;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 1000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.3s;
+}
+header.shrink { padding: 10px 20px; font-size: 1.1em; }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
 
-  body {
-    font-family: 'EB Garamond', Georgia, serif;
-    font-size: 17px;
-    line-height: 1.8;
-    background-color: var(--bg);
-    color: var(--text);
-  }
+.doc-title-card {
+  background: #fff;
+  padding: 36px 35px 28px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  border-top: 4px solid #2c5364;
+}
+.doc-title-card h1 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #0f2027;
+  margin-bottom: 10px;
+}
+.doc-meta {
+  font-size: 0.82em;
+  color: #888;
+  margin-top: 6px;
+}
 
-  /* STICKY HEADER */
-  header {
-    position: sticky;
-    top: 0;
-    background: linear-gradient(90deg, #1e3c72, #2a5298);
-    color: white;
-    padding: 16px 24px;
-    text-align: center;
-    font-family: 'Libre Baskerville', Georgia, serif;
-    font-size: 1.3em;
-    letter-spacing: 0.06em;
-    z-index: 1000;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
-  }
+.toc-card {
+  background: #fff;
+  padding: 28px 35px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border-left: 4px solid #4CAF50;
+}
+.toc-card h2 {
+  font-size: 0.78em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 16px;
+}
+.toc-card ol {
+  list-style: none;
+  padding: 0;
+  columns: 2;
+  column-gap: 24px;
+}
+.toc-card ol li {
+  margin-bottom: 7px;
+  break-inside: avoid;
+}
+.toc-card ol li a {
+  color: #2c5364;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.toc-card ol li a:hover { color: #4CAF50; text-decoration: underline; }
 
-  /* MAIN CONTAINER */
-  main {
-    max-width: 860px;
-    margin: 48px auto 60px;
-    padding: 0 24px;
-  }
+.card {
+  background: #fff;
+  padding: 30px 35px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,0.15); }
 
-  /* DOCUMENT HEADER */
-  .doc-header {
-    background: var(--white);
-    border-top: 4px solid var(--navy);
-    border-radius: 4px 4px 0 0;
-    padding: 40px 48px 32px;
-    text-align: center;
-    border-bottom: 1px solid var(--border);
-  }
+.card h2 {
+  font-size: 1.05em;
+  font-weight: 700;
+  color: #0f2027;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e6ebf2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.card h2::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #4CAF50;
+  opacity: 0.4;
+}
 
-  .doc-header h1 {
-    font-family: 'Libre Baskerville', Georgia, serif;
-    font-size: 1.9em;
-    font-weight: 700;
-    color: var(--navy);
-    letter-spacing: 0.02em;
-    margin-bottom: 10px;
-  }
+.card h3 {
+  font-size: 0.95em;
+  font-weight: 700;
+  color: #203a43;
+  margin-top: 18px;
+  margin-bottom: 5px;
+  text-align: left;
+}
 
-  .doc-meta {
-    font-size: 0.85em;
-    color: var(--muted);
-    font-style: italic;
-    letter-spacing: 0.03em;
-  }
+.card h4 {
+  font-size: 0.92em;
+  font-weight: 600;
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 3px;
+  padding-left: 18px;
+}
 
-  .doc-meta span {
-    margin: 0 10px;
-  }
+.card p.deep {
+  padding-left: 36px;
+  font-size: 0.9em;
+  color: #444;
+  margin-top: 5px;
+  margin-bottom: 4px;
+}
 
-  /* TABLE OF CONTENTS */
-  .toc {
-    background: var(--white);
-    border-left: 3px solid var(--accent);
-    padding: 28px 40px;
-    border-bottom: 1px solid var(--border);
-  }
+p { margin: 6px 0 10px; font-size: 0.95em; color: #333; }
 
-  .toc h2 {
-    font-family: 'Libre Baskerville', Georgia, serif;
-    font-size: 0.8em;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--navy);
-    margin-bottom: 16px;
-  }
+footer { text-align: center; font-size: 0.8em; color: #888; margin: 40px 0 20px; }
 
-  .toc ol {
-    list-style: none;
-    padding: 0;
-    columns: 2;
-    column-gap: 32px;
-  }
-
-  .toc ol li {
-    margin-bottom: 6px;
-    break-inside: avoid;
-  }
-
-  .toc ol li a {
-    color: var(--navy-light);
-    text-decoration: none;
-    font-size: 0.92em;
-    transition: color 0.2s;
-  }
-
-  .toc ol li a:hover {
-    color: var(--accent);
-    text-decoration: underline;
-  }
-
-  /* CONTENT BODY */
-  .doc-body {
-    background: var(--white);
-    padding: 40px 48px;
-    border-radius: 0 0 4px 4px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
-  }
-
-  /* CLAUSE HEADINGS */
-  .clause {
-    margin-top: 44px;
-    padding-top: 28px;
-    border-top: 1px solid var(--border);
-  }
-
-  .clause:first-child {
-    margin-top: 0;
-    padding-top: 0;
-    border-top: none;
-  }
-
-  h2.clause-title {
-    font-family: 'Libre Baskerville', Georgia, serif;
-    font-size: 1.05em;
-    font-weight: 700;
-    color: var(--navy);
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  h2.clause-title::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--accent);
-    opacity: 0.5;
-  }
-
-  /* SUBCLAUSE */
-  h3.subclause {
-    font-family: 'Libre Baskerville', Georgia, serif;
-    font-size: 0.95em;
-    font-weight: 700;
-    color: var(--text);
-    margin-top: 18px;
-    margin-bottom: 6px;
-  }
-
-  /* SUBSUBCLAUSE */
-  h4.subsubclause {
-    font-size: 0.95em;
-    font-weight: 400;
-    font-style: italic;
-    color: var(--text);
-    margin-top: 10px;
-    margin-bottom: 4px;
-    padding-left: 20px;
-  }
-
-  /* DEEP SUBCLAUSE */
-  p.deep {
-    padding-left: 40px;
-    font-size: 0.93em;
-    color: var(--text);
-    margin-top: 6px;
-    margin-bottom: 4px;
-  }
-
-  p {
-    margin-bottom: 10px;
-  }
-
-  /* FOOTER */
-  footer {
-    text-align: center;
-    font-size: 0.78em;
-    color: #999;
-    margin: 40px 0 20px;
-    font-family: 'Libre Baskerville', Georgia, serif;
-    letter-spacing: 0.04em;
-  }
-
-  @media (max-width: 640px) {
-    .doc-header, .doc-body, .toc { padding: 24px 20px; }
-    .toc ol { columns: 1; }
-    h2.clause-title { font-size: 0.95em; }
-  }
+@media (max-width: 640px) {
+  .toc-card ol { columns: 1; }
+  .card { padding: 22px 18px; }
+  .doc-title-card { padding: 24px 18px; }
+  .doc-title-card h1 { font-size: 1.5em; }
+}
 </style>
 </head>
 <body>
 
-<header>The Codex's Spectrum</header>
+<header id="pageHeader">The Codex's Spectrum</header>
 
 <main>
 
-  <!-- DOCUMENT HEADER -->
-  <div class="doc-header">
+  <div class="doc-title-card">
     <h1>Terms &amp; Conditions of Engagement</h1>
-    <p class="doc-meta">
-      <span>Version 1.0</span>·<span>March 2026</span>·<span>© H-Baidwan. All rights reserved.</span>
-    </p>
+    <p class="doc-meta">Version 1.0 &nbsp;·&nbsp; March 2026 &nbsp;·&nbsp; © H-Baidwan. All rights reserved.</p>
   </div>
 
-  <!-- TABLE OF CONTENTS -->
-  <nav class="toc">
+  <div class="toc-card">
     <h2>Contents</h2>
     <ol>
       <li><a href="#A">A) Definitions</a></li>
@@ -249,345 +196,333 @@
       <li><a href="#M">M) Force Majeure</a></li>
       <li><a href="#N">N) General Provisions</a></li>
     </ol>
-  </nav>
+  </div>
 
-  <!-- DOCUMENT BODY -->
-  <div class="doc-body">
+  <div class="card" id="A">
+    <h2>A) Definitions</h2>
+    <h3>A.1</h3>
+    <p>In this Agreement, the following terms shall have the meanings ascribed to them:</p>
+    <h4>A.1(a) &nbsp;The OPC</h4>
+    <p>The Codex's Spectrum, a One Person Company registered under the Companies Act 2013, providing Assessment services under this Agreement.</p>
+    <h4>A.1(b) &nbsp;The Client</h4>
+    <p>The entity engaging with the OPC for Assessment services under this Agreement.</p>
+    <h4>A.1(c) &nbsp;The Candidate</h4>
+    <p>The individual subject to an Assessment assigned by the Client under this Agreement.</p>
+    <h4>A.1(d) &nbsp;The Codex</h4>
+    <p>The document containing the rules, definitions, and standards used as a reference to all Assessments conducted by the OPC, incorporated by reference into this Agreement.</p>
+    <h4>A.1(e) &nbsp;The Task</h4>
+    <p>The independent piece of an Assessment issued to a Candidate, containing defined thresholds and evaluation criteria.</p>
+    <h4>A.1(f) &nbsp;The Assessor</h4>
+    <p>A person certified by the OPC to conduct Assessments. The full scope of the Assessor's role and obligations is set out in Clause E.</p>
+    <h4>A.1(g) &nbsp;Assessment</h4>
+    <p>The formal evaluation of a Candidate's output comprising multiple Tasks, each structured within the framework of the Codex.</p>
+    <h4>A.1(h) &nbsp;Doctrine</h4>
+    <p>A defined Skill, Register, or Style that a Task measures.</p>
+    <h4>A.1(i) &nbsp;Candidate Agreement</h4>
+    <p>The agreement entered into between the OPC, the Client, and the Candidate prior to the commencement of an Assessment, governing the conduct of the Assessment and the Candidate's obligations therein.</p>
+  </div>
 
-    <!-- A -->
-    <section class="clause" id="A">
-      <h2 class="clause-title">A) Definitions</h2>
-      <h3 class="subclause">A.1</h3>
-      <p>In this Agreement, the following terms shall have the meanings ascribed to them:</p>
-      <h4 class="subsubclause">A.1(a) &nbsp;The OPC</h4>
-      <p>The Codex's Spectrum, a One Person Company registered under the Companies Act 2013, providing Assessment services under this Agreement.</p>
-      <h4 class="subsubclause">A.1(b) &nbsp;The Client</h4>
-      <p>The entity engaging with the OPC for Assessment services under this Agreement.</p>
-      <h4 class="subsubclause">A.1(c) &nbsp;The Candidate</h4>
-      <p>The individual subject to an Assessment assigned by the Client under this Agreement.</p>
-      <h4 class="subsubclause">A.1(d) &nbsp;The Codex</h4>
-      <p>The document containing the rules, definitions, and standards used as a reference to all Assessments conducted by the OPC, incorporated by reference into this Agreement.</p>
-      <h4 class="subsubclause">A.1(e) &nbsp;The Task</h4>
-      <p>The independent piece of an Assessment issued to a Candidate, containing defined thresholds and evaluation criteria.</p>
-      <h4 class="subsubclause">A.1(f) &nbsp;The Assessor</h4>
-      <p>A person certified by the OPC to conduct Assessments. The full scope of the Assessor's role and obligations is set out in Clause E.</p>
-      <h4 class="subsubclause">A.1(g) &nbsp;Assessment</h4>
-      <p>The formal evaluation of a Candidate's output comprising multiple Tasks, each structured within the framework of the Codex.</p>
-      <h4 class="subsubclause">A.1(h) &nbsp;Doctrine</h4>
-      <p>A defined Skill, Register, or Style that a Task measures.</p>
-      <h4 class="subsubclause">A.1(i) &nbsp;Candidate Agreement</h4>
-      <p>The agreement entered into between the OPC, the Client, and the Candidate prior to the commencement of an Assessment, governing the conduct of the Assessment and the Candidate's obligations therein.</p>
-    </section>
+  <div class="card" id="B">
+    <h2>B) Priority of Interpretation</h2>
+    <h3>B.1</h3>
+    <h4>B.1(a)</h4>
+    <p>All terms are defined within the Codex and the Task.</p>
+    <h4>B.1(b)</h4>
+    <p>Each score is tied to rigid thresholds.</p>
+    <h4>B.1(c)</h4>
+    <p>All Candidate outputs shall be evaluated against the Task and the Codex.</p>
+    <h3>B.2</h3>
+    <p>In the event of any conflict or ambiguity in interpretation, the following order of precedence shall apply, with B.2(a) taking highest priority:</p>
+    <h4>B.2(a)</h4>
+    <p>The Task's Definition.</p>
+    <h4>B.2(b)</h4>
+    <p>The Codex's Definition.</p>
+    <h4>B.2(c)</h4>
+    <p>The Illustrative Examples.</p>
+  </div>
 
-    <!-- B -->
-    <section class="clause" id="B">
-      <h2 class="clause-title">B) Priority of Interpretation</h2>
-      <h3 class="subclause">B.1</h3>
-      <h4 class="subsubclause">B.1(a)</h4>
-      <p>All terms are defined within the Codex and the Task.</p>
-      <h4 class="subsubclause">B.1(b)</h4>
-      <p>Each score is tied to rigid thresholds.</p>
-      <h4 class="subsubclause">B.1(c)</h4>
-      <p>All Candidate outputs shall be evaluated against the Task and the Codex.</p>
-      <h3 class="subclause">B.2</h3>
-      <p>In the event of any conflict or ambiguity in interpretation, the following order of precedence shall apply, with B.2(a) taking highest priority:</p>
-      <h4 class="subsubclause">B.2(a)</h4>
-      <p>The Task's Definition.</p>
-      <h4 class="subsubclause">B.2(b)</h4>
-      <p>The Codex's Definition.</p>
-      <h4 class="subsubclause">B.2(c)</h4>
-      <p>The Illustrative Examples.</p>
-    </section>
+  <div class="card" id="C">
+    <h2>C) Severability</h2>
+    <h3>C.1</h3>
+    <p>If any single Clause, Definition, or Illustrative Example within this Agreement is found by a court of competent jurisdiction to be invalid, illegal, or unenforceable, the remainder shall continue in full force and effect.</p>
+  </div>
 
-    <!-- C -->
-    <section class="clause" id="C">
-      <h2 class="clause-title">C) Severability</h2>
-      <h3 class="subclause">C.1</h3>
-      <p>If any single Clause, Definition, or Illustrative Example within this Agreement is found by a court of competent jurisdiction to be invalid, illegal, or unenforceable, the remainder shall continue in full force and effect.</p>
-    </section>
+  <div class="card" id="D">
+    <h2>D) Modification and Version Governance</h2>
+    <h3>D.1</h3>
+    <p>The Codex contains the definitive rules applicable to all Assessments. The version of the Codex active at the initiation of an Assessment is the only version applicable to that Assessment. Retroactive application of updated definitions is strictly prohibited.</p>
+  </div>
 
-    <!-- D -->
-    <section class="clause" id="D">
-      <h2 class="clause-title">D) Modification and Version Governance</h2>
-      <h3 class="subclause">D.1</h3>
-      <p>The Codex contains the definitive rules applicable to all Assessments. The version of the Codex active at the initiation of an Assessment is the only version applicable to that Assessment. Retroactive application of updated definitions is strictly prohibited.</p>
-    </section>
+  <div class="card" id="E">
+    <h2>E) An Assessor's Role</h2>
+    <h3>E.1</h3>
+    <p>The Assessor's role encompasses the following procedures, which include but are not limited to, provided all related procedures remain incidental to and consistent with the conduct of the Assessment:</p>
+    <h4>E.1(a)</h4>
+    <p>The initial consultation regarding the Assessment process.</p>
+    <h4>E.1(b)</h4>
+    <p>The administration of the Assessment.</p>
+    <h4>E.1(c)</h4>
+    <p>The verification of Assessment results.</p>
+    <h3>E.2</h3>
+    <p>The Assessor's evaluative function is strictly limited to the applicable Task and the Codex. No discretionary authority, personal judgment, or external standard shall be applied at any stage of the Assessment.</p>
+    <h3>E.3</h3>
+    <p>Assessments shall be verified strictly by the thresholds provided inside the Task. If a Candidate's output falls short of the defined threshold by a single character or percentage, there will be no application of a near-miss standard. Points shall not be granted unless specified within the individual Task.</p>
+    <h3>E.4</h3>
+    <p>Where an Assessor becomes unavailable due to illness, death, physical or neurological incapacity, or a medical emergency affecting an immediate family member, defined as spouse, parent, child, or sibling, the OPC shall notify the Client in writing within seven (7) days. If the Assessor remains unavailable at the expiry of the notice period, the Client shall be entitled to a full refund of the upfront fee paid.</p>
+  </div>
 
-    <!-- E -->
-    <section class="clause" id="E">
-      <h2 class="clause-title">E) An Assessor's Role</h2>
-      <h3 class="subclause">E.1</h3>
-      <p>The Assessor's role encompasses the following procedures, which include but are not limited to, provided all related procedures remain incidental to and consistent with the conduct of the Assessment:</p>
-      <h4 class="subsubclause">E.1(a)</h4>
-      <p>The initial consultation regarding the Assessment process.</p>
-      <h4 class="subsubclause">E.1(b)</h4>
-      <p>The administration of the Assessment.</p>
-      <h4 class="subsubclause">E.1(c)</h4>
-      <p>The verification of Assessment results.</p>
-      <h3 class="subclause">E.2</h3>
-      <p>The Assessor's evaluative function is strictly limited to the applicable Task and the Codex. No discretionary authority, personal judgment, or external standard shall be applied at any stage of the Assessment.</p>
-      <h3 class="subclause">E.3</h3>
-      <p>Assessments shall be verified strictly by the thresholds provided inside the Task. If a Candidate's output falls short of the defined threshold by a single character or percentage, there will be no application of a near-miss standard. Points shall not be granted unless specified within the individual Task.</p>
-      <h3 class="subclause">E.4</h3>
-      <p>Where an Assessor becomes unavailable due to illness, death, physical or neurological incapacity, or a medical emergency affecting an immediate family member, defined as spouse, parent, child, or sibling, the OPC shall notify the Client in writing within seven (7) days. If the Assessor remains unavailable at the expiry of the notice period, the Client shall be entitled to a full refund of the upfront fee paid.</p>
-    </section>
+  <div class="card" id="F">
+    <h2>F) Arbitration and Governing Law</h2>
+    <h3>F.1</h3>
+    <p>Any dispute, controversy, or claim arising out of or in connection with this Agreement, including any question regarding its existence, validity, interpretation, breach, or termination, shall be referred to and resolved exclusively by arbitration on a fast track basis under Section 29B of the Arbitration and Conciliation Act, 1996, as amended.</p>
+    <h3>F.2</h3>
+    <p>The arbitral tribunal shall consist of a sole arbitrator appointed by mutual agreement of the parties. Failing agreement within thirty (30) days of a dispute being raised, the arbitrator shall be appointed by the Punjab and Haryana High Court Arbitration Centre in accordance with its rules.</p>
+    <h3>F.3</h3>
+    <p>The seat of arbitration shall be Chandigarh, India. The courts at Chandigarh shall have exclusive supervisory jurisdiction over the arbitration proceedings.</p>
+    <h3>F.4</h3>
+    <p>The language of arbitration shall be English.</p>
+    <h3>F.5</h3>
+    <p>Nothing in this Clause shall prevent either party from seeking urgent interim or injunctive relief from the courts at Chandigarh under Section 9 of the Arbitration and Conciliation Act, 1996, pending constitution of the arbitral tribunal.</p>
+    <h3>F.6</h3>
+    <p>The arbitral award shall be final and binding on the parties and may be enforced in any court of competent jurisdiction.</p>
+    <h3>F.7</h3>
+    <p>This Agreement and all disputes arising out of or in connection with it shall be governed by and construed in accordance with the laws of India.</p>
+  </div>
 
-    <!-- F -->
-    <section class="clause" id="F">
-      <h2 class="clause-title">F) Arbitration and Governing Law</h2>
-      <h3 class="subclause">F.1</h3>
-      <p>Any dispute, controversy, or claim arising out of or in connection with this Agreement, including any question regarding its existence, validity, interpretation, breach, or termination, shall be referred to and resolved exclusively by arbitration on a fast track basis under Section 29B of the Arbitration and Conciliation Act, 1996, as amended.</p>
-      <h3 class="subclause">F.2</h3>
-      <p>The arbitral tribunal shall consist of a sole arbitrator appointed by mutual agreement of the parties. Failing agreement within thirty (30) days of a dispute being raised, the arbitrator shall be appointed by the Punjab and Haryana High Court Arbitration Centre in accordance with its rules.</p>
-      <h3 class="subclause">F.3</h3>
-      <p>The seat of arbitration shall be Chandigarh, India. The courts at Chandigarh shall have exclusive supervisory jurisdiction over the arbitration proceedings.</p>
-      <h3 class="subclause">F.4</h3>
-      <p>The language of arbitration shall be English.</p>
-      <h3 class="subclause">F.5</h3>
-      <p>Nothing in this Clause shall prevent either party from seeking urgent interim or injunctive relief from the courts at Chandigarh under Section 9 of the Arbitration and Conciliation Act, 1996, pending constitution of the arbitral tribunal.</p>
-      <h3 class="subclause">F.6</h3>
-      <p>The arbitral award shall be final and binding on the parties and may be enforced in any court of competent jurisdiction.</p>
-      <h3 class="subclause">F.7</h3>
-      <p>This Agreement and all disputes arising out of or in connection with it shall be governed by and construed in accordance with the laws of India.</p>
-    </section>
+  <div class="card" id="G">
+    <h2>G) Limitation of Liability</h2>
+    <h3>G.1</h3>
+    <p>The aggregate liability of the OPC to any party, whether in contract or otherwise, shall not exceed three times the fee paid by the Client for the Assessment giving rise to the claim.</p>
+    <h3>G.2</h3>
+    <p>The OPC shall not be liable for any indirect or consequential loss or damage, including:</p>
+    <h4>G.2(a)</h4>
+    <p>Loss of employment, profit, business opportunity, or any other consequential economic loss.</p>
+    <h4>G.2(b)</h4>
+    <p>Reputational harm.</p>
+    <h3>G.3</h3>
+    <p>The parties acknowledge that this limitation reflects a reasonable and mutually agreed allocation of risk.</p>
+  </div>
 
-    <!-- G -->
-    <section class="clause" id="G">
-      <h2 class="clause-title">G) Limitation of Liability</h2>
-      <h3 class="subclause">G.1</h3>
-      <p>The aggregate liability of the OPC to any party, whether in contract or otherwise, shall not exceed three times the fee paid by the Client for the Assessment giving rise to the claim.</p>
-      <h3 class="subclause">G.2</h3>
-      <p>The OPC shall not be liable for any indirect or consequential loss or damage, including:</p>
-      <h4 class="subsubclause">G.2(a)</h4>
-      <p>Loss of employment, profit, business opportunity, or any other consequential economic loss.</p>
-      <h4 class="subsubclause">G.2(b)</h4>
-      <p>Reputational harm.</p>
-      <h3 class="subclause">G.3</h3>
-      <p>The parties acknowledge that this limitation reflects a reasonable and mutually agreed allocation of risk.</p>
-    </section>
+  <div class="card" id="H">
+    <h2>H) Indemnity</h2>
+    <h3>H.1</h3>
+    <p>Each party shall indemnify the other party against any losses, damages, penalties, legal costs, and expenses arising from any third party claim caused by that party's breach of this Agreement within their respective role, defined as follows:</p>
+    <h4>H.1(a)</h4>
+    <p>The OPC's responsibility is limited to the conduct of Assessments in accordance with the Codex and the applicable Task.</p>
+    <h4>H.1(b)</h4>
+    <p>The Client's responsibility includes the use of Assessment outputs, certification representations, and all conduct in relation to Candidates.</p>
+    <h3>H.2</h3>
+    <p>The indemnity obligation under H.1 shall only arise upon:</p>
+    <h4>H.2(a)</h4>
+    <p>A final order of a court of competent jurisdiction establishing the breach giving rise to the claim.</p>
+    <h4>H.2(b)</h4>
+    <p>A final arbitral award under Clause F establishing the breach giving rise to the claim.</p>
+    <h3>H.3</h3>
+    <p>No indemnity obligation shall arise from:</p>
+    <h4>H.3(a)</h4>
+    <p>A mere allegation of breach, whether by a party or a third party.</p>
+    <h4>H.3(b)</h4>
+    <p>A hiring decision, employment outcome, or commercial consequence arising from an Assessment result.</p>
+    <h4>H.3(c)</h4>
+    <p>Misuse of Assessment outputs by the Client or any third party acting on their behalf.</p>
+    <h3>H.4</h3>
+    <p>The indemnity under this Clause shall follow the judgment or award as issued. Where a court of competent jurisdiction disapplies the limitation under Clause G, the indemnity shall extend to the full amount ordered.</p>
+    <h3>H.5</h3>
+    <p>Legal costs covered under this Clause shall include:</p>
+    <h4>H.5(a)</h4>
+    <p>Professional legal fees actually incurred and documented, recoverable according to the following tiers as determined by the arbitral tribunal at the outset of proceedings:</p>
+    <p class="deep">H.5(a)(i) &nbsp;&nbsp;&nbsp;Tier 1 — Procedural and administrative disputes: fees consistent with engagement of one District Court advocate.</p>
+    <p class="deep">H.5(a)(ii) &nbsp;&nbsp;Tier 2 — Negligence and misapplication: fees consistent with engagement of one High Court advocate.</p>
+    <p class="deep">H.5(a)(iii) &nbsp;Tier 3 — Fraud and wilful misconduct: fees consistent with engagement of one Senior Advocate designated under Section 16 of the Advocates Act 1961 and one briefing advocate, at the discretion of the arbitral tribunal.</p>
+    <h4>H.5(b)</h4>
+    <p>Court or tribunal filing fees.</p>
+    <h4>H.5(c)</h4>
+    <p>Any other costs awarded by the court or tribunal.</p>
+    <h3>H.6</h3>
+    <p>The Indemnified Party shall:</p>
+    <h4>H.6(a)</h4>
+    <p>Notify the Indemnifying Party in writing within thirty (30) days of becoming aware of any claim that may trigger this Clause.</p>
+    <h4>H.6(b)</h4>
+    <p>Not settle any such claim without the prior written consent of the Indemnifying Party.</p>
+    <h4>H.6(c)</h4>
+    <p>Cooperate with the Indemnifying Party in the conduct of any defence.</p>
+    <h3>H.7</h3>
+    <p>The indemnifying party's obligation under this Clause shall extend to the net loss actually suffered by the indemnified party after accounting for any amounts recovered from third parties, such that the indemnified party is restored to the position it occupied prior to the loss.</p>
+  </div>
 
-    <!-- H -->
-    <section class="clause" id="H">
-      <h2 class="clause-title">H) Indemnity</h2>
-      <h3 class="subclause">H.1</h3>
-      <p>Each party shall indemnify the other party against any losses, damages, penalties, legal costs, and expenses arising from any third party claim caused by that party's breach of this Agreement within their respective role, defined as follows:</p>
-      <h4 class="subsubclause">H.1(a)</h4>
-      <p>The OPC's responsibility is limited to the conduct of Assessments in accordance with the Codex and the applicable Task.</p>
-      <h4 class="subsubclause">H.1(b)</h4>
-      <p>The Client's responsibility includes the use of Assessment outputs, certification representations, and all conduct in relation to Candidates.</p>
-      <h3 class="subclause">H.2</h3>
-      <p>The indemnity obligation under H.1 shall only arise upon:</p>
-      <h4 class="subsubclause">H.2(a)</h4>
-      <p>A final order of a court of competent jurisdiction establishing the breach giving rise to the claim.</p>
-      <h4 class="subsubclause">H.2(b)</h4>
-      <p>A final arbitral award under Clause F establishing the breach giving rise to the claim.</p>
-      <h3 class="subclause">H.3</h3>
-      <p>No indemnity obligation shall arise from:</p>
-      <h4 class="subsubclause">H.3(a)</h4>
-      <p>A mere allegation of breach, whether by a party or a third party.</p>
-      <h4 class="subsubclause">H.3(b)</h4>
-      <p>A hiring decision, employment outcome, or commercial consequence arising from an Assessment result.</p>
-      <h4 class="subsubclause">H.3(c)</h4>
-      <p>Misuse of Assessment outputs by the Client or any third party acting on their behalf.</p>
-      <h3 class="subclause">H.4</h3>
-      <p>The indemnity under this Clause shall follow the judgment or award as issued. Where a court of competent jurisdiction disapplies the limitation under Clause G, the indemnity shall extend to the full amount ordered.</p>
-      <h3 class="subclause">H.5</h3>
-      <p>Legal costs covered under this Clause shall include:</p>
-      <h4 class="subsubclause">H.5(a)</h4>
-      <p>Professional legal fees actually incurred and documented, recoverable according to the following tiers as determined by the arbitral tribunal at the outset of proceedings:</p>
-      <p class="deep">H.5(a)(i) &nbsp;&nbsp;Tier 1 — Procedural and administrative disputes: fees consistent with engagement of one District Court advocate.</p>
-      <p class="deep">H.5(a)(ii) &nbsp;Tier 2 — Negligence and misapplication: fees consistent with engagement of one High Court advocate.</p>
-      <p class="deep">H.5(a)(iii) Tier 3 — Fraud and wilful misconduct: fees consistent with engagement of one Senior Advocate designated under Section 16 of the Advocates Act 1961 and one briefing advocate, at the discretion of the arbitral tribunal.</p>
-      <h4 class="subsubclause">H.5(b)</h4>
-      <p>Court or tribunal filing fees.</p>
-      <h4 class="subsubclause">H.5(c)</h4>
-      <p>Any other costs awarded by the court or tribunal.</p>
-      <h3 class="subclause">H.6</h3>
-      <p>The Indemnified Party shall:</p>
-      <h4 class="subsubclause">H.6(a)</h4>
-      <p>Notify the Indemnifying Party in writing within thirty (30) days of becoming aware of any claim that may trigger this Clause.</p>
-      <h4 class="subsubclause">H.6(b)</h4>
-      <p>Not settle any such claim without the prior written consent of the Indemnifying Party.</p>
-      <h4 class="subsubclause">H.6(c)</h4>
-      <p>Cooperate with the Indemnifying Party in the conduct of any defence.</p>
-      <h3 class="subclause">H.7</h3>
-      <p>The indemnifying party's obligation under this Clause shall extend to the net loss actually suffered by the indemnified party after accounting for any amounts recovered from third parties, such that the indemnified party is restored to the position it occupied prior to the loss.</p>
-    </section>
+  <div class="card" id="I">
+    <h2>I) Termination</h2>
+    <h3>I.1</h3>
+    <p>Either party may terminate this Agreement by providing thirty (30) days written notice to the other party upon the occurrence of any of the following:</p>
+    <h4>I.1(a)</h4>
+    <p>Material breach of this Agreement that remains unremedied at the expiry of the notice period.</p>
+    <h4>I.1(b)</h4>
+    <p>Refusal or failure to cooperate with the Assessment process, including failure to provide Assessment materials, respond to Assessor communications, or make Candidates available. Written notice shall identify the specific failure and commence the thirty (30) day remedy period.</p>
+    <h4>I.1(c)</h4>
+    <p>Vexatious conduct toward the OPC or any Assessor, including the making of false or misleading statements about the OPC, the Assessor, or the Codex to any third party.</p>
+    <h4>I.1(d)</h4>
+    <p>Requests to conduct evaluations outside the scope of the Codex or the applicable Task, persisting after written notice from the OPC identifying the excess.</p>
+    <h3>I.2</h3>
+    <p>The OPC may terminate this Agreement immediately and without notice upon any act constituting a criminal offence under the Bharatiya Nyaya Sanhita 2023, including but not limited to fraud, forgery, or cheating by personation, by the Client, any Candidate, or any person acting on their behalf.</p>
+    <h3>I.3</h3>
+    <p>Where upfront payment is reversed, recalled, or fails to clear after the Candidate Agreement has been signed, all Assessment procedures shall be immediately suspended and the OPC shall notify the Client in writing. If cleared payment is not received within seven (7) days of such notice, the OPC may terminate this Agreement immediately without further notice.</p>
+    <h3>I.4</h3>
+    <p>The OPC shall not be obligated to proceed to the Candidate Agreement or commence any Assessment until cleared upfront payment has been received in full.</p>
+    <h3>I.5</h3>
+    <p>Where either party terminates this Agreement after the Candidate Agreement has been signed, the Client shall be entitled to a refund of fifty percent (50%) of the upfront fee paid, regardless of which party initiates termination, except where termination arises under I.2, in which case no refund shall be applicable.</p>
+    <h3>I.6</h3>
+    <p>Termination of this Agreement shall not affect any rights or obligations that have accrued prior to termination. The following Clauses shall survive termination and remain binding on the parties:</p>
+    <h4>I.6(a)</h4>
+    <p>Clause F — Arbitration and Governing Law.</p>
+    <h4>I.6(b)</h4>
+    <p>Clause G — Limitation of Liability.</p>
+    <h4>I.6(c)</h4>
+    <p>Clause H — Indemnity.</p>
+    <h4>I.6(d)</h4>
+    <p>Clause B — Priority of Interpretation.</p>
+    <h4>I.6(e)</h4>
+    <p>Clause J — Non-Solicitation, for the period specified therein.</p>
+    <h4>I.6(f)</h4>
+    <p>Clause K — Intellectual Property.</p>
+    <h4>I.6(g)</h4>
+    <p>Clause L — Data Protection, for the retention period specified therein.</p>
+  </div>
 
-    <!-- I -->
-    <section class="clause" id="I">
-      <h2 class="clause-title">I) Termination</h2>
-      <h3 class="subclause">I.1</h3>
-      <p>Either party may terminate this Agreement by providing thirty (30) days written notice to the other party upon the occurrence of any of the following:</p>
-      <h4 class="subsubclause">I.1(a)</h4>
-      <p>Material breach of this Agreement that remains unremedied at the expiry of the notice period.</p>
-      <h4 class="subsubclause">I.1(b)</h4>
-      <p>Refusal or failure to cooperate with the Assessment process, including failure to provide Assessment materials, respond to Assessor communications, or make Candidates available. Written notice shall identify the specific failure and commence the thirty (30) day remedy period.</p>
-      <h4 class="subsubclause">I.1(c)</h4>
-      <p>Vexatious conduct toward the OPC or any Assessor, including the making of false or misleading statements about the OPC, the Assessor, or the Codex to any third party.</p>
-      <h4 class="subsubclause">I.1(d)</h4>
-      <p>Requests to conduct evaluations outside the scope of the Codex or the applicable Task, persisting after written notice from the OPC identifying the excess.</p>
-      <h3 class="subclause">I.2</h3>
-      <p>The OPC may terminate this Agreement immediately and without notice upon any act constituting a criminal offence under the Bharatiya Nyaya Sanhita 2023, including but not limited to fraud, forgery, or cheating by personation, by the Client, any Candidate, or any person acting on their behalf.</p>
-      <h3 class="subclause">I.3</h3>
-      <p>Where upfront payment is reversed, recalled, or fails to clear after the Candidate Agreement has been signed, all Assessment procedures shall be immediately suspended and the OPC shall notify the Client in writing. If cleared payment is not received within seven (7) days of such notice, the OPC may terminate this Agreement immediately without further notice.</p>
-      <h3 class="subclause">I.4</h3>
-      <p>The OPC shall not be obligated to proceed to the Candidate Agreement or commence any Assessment until cleared upfront payment has been received in full.</p>
-      <h3 class="subclause">I.5</h3>
-      <p>Where either party terminates this Agreement after the Candidate Agreement has been signed, the Client shall be entitled to a refund of fifty percent (50%) of the upfront fee paid, regardless of which party initiates termination, except where termination arises under I.2, in which case no refund shall be applicable.</p>
-      <h3 class="subclause">I.6</h3>
-      <p>Termination of this Agreement shall not affect any rights or obligations that have accrued prior to termination. The following Clauses shall survive termination and remain binding on the parties:</p>
-      <h4 class="subsubclause">I.6(a)</h4>
-      <p>Clause F — Arbitration and Governing Law.</p>
-      <h4 class="subsubclause">I.6(b)</h4>
-      <p>Clause G — Limitation of Liability.</p>
-      <h4 class="subsubclause">I.6(c)</h4>
-      <p>Clause H — Indemnity.</p>
-      <h4 class="subsubclause">I.6(d)</h4>
-      <p>Clause B — Priority of Interpretation.</p>
-      <h4 class="subsubclause">I.6(e)</h4>
-      <p>Clause J — Non-Solicitation, for the period specified therein.</p>
-      <h4 class="subsubclause">I.6(f)</h4>
-      <p>Clause K — Intellectual Property.</p>
-      <h4 class="subsubclause">I.6(g)</h4>
-      <p>Clause L — Data Protection, for the retention period specified therein.</p>
-    </section>
+  <div class="card" id="J">
+    <h2>J) Non-Solicitation</h2>
+    <h3>J.1</h3>
+    <p>For a period of twelve (12) months following the termination or expiry of this Agreement, neither party shall directly or indirectly solicit, recruit, engage, or employ any Restricted Person of the other party, whether or not such person approaches the party on their own initiative.</p>
+    <h3>J.2</h3>
+    <p>A Restricted Person means any individual who, at any time during the term of this Agreement:</p>
+    <h4>J.2(a)</h4>
+    <p>Had access to information that the other party has not publicly disclosed, including but not limited to internal methodology, client relationships, pricing, or operational processes; or</p>
+    <h4>J.2(b)</h4>
+    <p>Accumulated three (3) or more months of experience directly or indirectly handling any work connected to the performance of either party.</p>
+    <h3>J.3</h3>
+    <p>The twelve (12) month restriction period shall commence on the date of termination or expiry of this Agreement. Time spent during the term of this Agreement shall not be counted toward the restriction period.</p>
+    <h3>J.4</h3>
+    <p>This Clause shall not apply to individuals whose sole function was incidental to this Agreement and who had no exposure to either category under J.2.</p>
+    <h3>J.5</h3>
+    <p>A breach of this Clause shall entitle the non-breaching party to seek urgent interim relief from the courts at Chandigarh under Clause F.5, and to pursue damages through arbitration under Clause F. Any damages awarded shall be subject to the limitation under Clause G.</p>
+  </div>
 
-    <!-- J -->
-    <section class="clause" id="J">
-      <h2 class="clause-title">J) Non-Solicitation</h2>
-      <h3 class="subclause">J.1</h3>
-      <p>For a period of twelve (12) months following the termination or expiry of this Agreement, neither party shall directly or indirectly solicit, recruit, engage, or employ any Restricted Person of the other party, whether or not such person approaches the party on their own initiative.</p>
-      <h3 class="subclause">J.2</h3>
-      <p>A Restricted Person means any individual who, at any time during the term of this Agreement:</p>
-      <h4 class="subsubclause">J.2(a)</h4>
-      <p>Had access to information that the other party has not publicly disclosed, including but not limited to internal methodology, client relationships, pricing, or operational processes; or</p>
-      <h4 class="subsubclause">J.2(b)</h4>
-      <p>Accumulated three (3) or more months of experience directly or indirectly handling any work connected to the performance of either party.</p>
-      <h3 class="subclause">J.3</h3>
-      <p>The twelve (12) month restriction period shall commence on the date of termination or expiry of this Agreement. Time spent during the term of this Agreement shall not be counted toward the restriction period.</p>
-      <h3 class="subclause">J.4</h3>
-      <p>This Clause shall not apply to individuals whose sole function was incidental to this Agreement and who had no exposure to either category under J.2.</p>
-      <h3 class="subclause">J.5</h3>
-      <p>A breach of this Clause shall entitle the non-breaching party to seek urgent interim relief from the courts at Chandigarh under Clause F.5, and to pursue damages through arbitration under Clause F. Any damages awarded shall be subject to the limitation under Clause G.</p>
-    </section>
+  <div class="card" id="K">
+    <h2>K) Intellectual Property</h2>
+    <h3>K.1</h3>
+    <p>All intellectual property rights in the Codex, Tasks, thresholds, Assessment methodology, and certification document format shall remain exclusively vested in the OPC pursuant to the Copyright Act 1957. No rights in any of the foregoing are transferred to the Client or the Candidate under this Agreement.</p>
+    <h3>K.2</h3>
+    <p>The Client acknowledges that payment of the Assessment fee confers no ownership rights over the certification document, the Tasks, or the methodology applied during the Assessment.</p>
+    <h3>K.3</h3>
+    <p>The Candidate shall have the right to present their certification, including individual task scores and collective results, to any third party as evidence of their personal achievement. This right is personal to the Candidate and non-transferable.</p>
+    <h3>K.4</h3>
+    <p>The certification issued under this Agreement may not be presented, claimed, or represented by any person other than the Candidate to whom it was issued. Misrepresentation of a certification as one's own constitutes an offence under the Bharatiya Nyaya Sanhita 2023.</p>
+    <h3>K.5</h3>
+    <p>The Tasks, thresholds, and Assessment Q&amp;A shall not be disclosed, reproduced, or distributed by the Client or Candidate following the conclusion of the Assessment.</p>
+    <h3>K.6</h3>
+    <p>The Client and Candidate shall not:</p>
+    <h4>K.6(a)</h4>
+    <p>Use any element of the Assessment methodology to develop, create, or operate a competing or derivative assessment tool.</p>
+    <h4>K.6(b)</h4>
+    <p>Present Assessment outputs for any commercial purpose beyond the hiring decision for which the Assessment was commissioned, save as permitted under K.7 and K.8.</p>
+    <h3>K.7</h3>
+    <p>The OPC may, upon written request from the Client, disclose the Assessment methodology applicable to a completed Assessment. Such disclosure shall be subject to the following conditions:</p>
+    <h4>K.7(a)</h4>
+    <p>The Client shall execute a Non-Disclosure Agreement in a form approved by the OPC prior to any disclosure.</p>
+    <h4>K.7(b)</h4>
+    <p>Disclosed methodology shall be used solely for the purpose of understanding the Assessment outcome and shall not be reproduced, distributed, shared, or applied for any commercial, competitive, or derivative purpose.</p>
+    <h4>K.7(c)</h4>
+    <p>Disclosure of methodology does not transfer any intellectual property rights to the Client. All rights remain vested in the OPC pursuant to K.1.</p>
+    <h3>K.8</h3>
+    <p>A Candidate may request a reasoning transcript for a specific Task by submitting a written statement containing:</p>
+    <h4>K.8(a)</h4>
+    <p>The specific Task in respect of which the concern arises.</p>
+    <h4>K.8(b)</h4>
+    <p>The nature of the alleged misapplication or error and the basis for the Candidate's belief that it occurred.</p>
+    <h3>K.9</h3>
+    <p>The OPC shall provide the requested reasoning transcript within thirty (30) days of receiving a valid request. A reasoning transcript shall contain the Assessor's evaluative notes and the connection to the applicable Codex Doctrine, but shall not disclose the numerical threshold values applicable to the Task.</p>
+  </div>
 
-    <!-- K -->
-    <section class="clause" id="K">
-      <h2 class="clause-title">K) Intellectual Property</h2>
-      <h3 class="subclause">K.1</h3>
-      <p>All intellectual property rights in the Codex, Tasks, thresholds, Assessment methodology, and certification document format shall remain exclusively vested in the OPC pursuant to the Copyright Act 1957. No rights in any of the foregoing are transferred to the Client or the Candidate under this Agreement.</p>
-      <h3 class="subclause">K.2</h3>
-      <p>The Client acknowledges that payment of the Assessment fee confers no ownership rights over the certification document, the Tasks, or the methodology applied during the Assessment.</p>
-      <h3 class="subclause">K.3</h3>
-      <p>The Candidate shall have the right to present their certification, including individual task scores and collective results, to any third party as evidence of their personal achievement. This right is personal to the Candidate and non-transferable.</p>
-      <h3 class="subclause">K.4</h3>
-      <p>The certification issued under this Agreement may not be presented, claimed, or represented by any person other than the Candidate to whom it was issued. Misrepresentation of a certification as one's own constitutes an offence under the Bharatiya Nyaya Sanhita 2023.</p>
-      <h3 class="subclause">K.5</h3>
-      <p>The Tasks, thresholds, and Assessment Q&amp;A shall not be disclosed, reproduced, or distributed by the Client or Candidate following the conclusion of the Assessment.</p>
-      <h3 class="subclause">K.6</h3>
-      <p>The Client and Candidate shall not:</p>
-      <h4 class="subsubclause">K.6(a)</h4>
-      <p>Use any element of the Assessment methodology to develop, create, or operate a competing or derivative assessment tool.</p>
-      <h4 class="subsubclause">K.6(b)</h4>
-      <p>Present Assessment outputs for any commercial purpose beyond the hiring decision for which the Assessment was commissioned, save as permitted under K.7 and K.8.</p>
-      <h3 class="subclause">K.7</h3>
-      <p>The OPC may, upon written request from the Client, disclose the Assessment methodology applicable to a completed Assessment. Such disclosure shall be subject to the following conditions:</p>
-      <h4 class="subsubclause">K.7(a)</h4>
-      <p>The Client shall execute a Non-Disclosure Agreement in a form approved by the OPC prior to any disclosure.</p>
-      <h4 class="subsubclause">K.7(b)</h4>
-      <p>Disclosed methodology shall be used solely for the purpose of understanding the Assessment outcome and shall not be reproduced, distributed, shared, or applied for any commercial, competitive, or derivative purpose.</p>
-      <h4 class="subsubclause">K.7(c)</h4>
-      <p>Disclosure of methodology does not transfer any intellectual property rights to the Client. All rights remain vested in the OPC pursuant to K.1.</p>
-      <h3 class="subclause">K.8</h3>
-      <p>A Candidate may request a reasoning transcript for a specific Task by submitting a written statement containing:</p>
-      <h4 class="subsubclause">K.8(a)</h4>
-      <p>The specific Task in respect of which the concern arises.</p>
-      <h4 class="subsubclause">K.8(b)</h4>
-      <p>The nature of the alleged misapplication or error and the basis for the Candidate's belief that it occurred.</p>
-      <h3 class="subclause">K.9</h3>
-      <p>The OPC shall provide the requested reasoning transcript within thirty (30) days of receiving a valid request. A reasoning transcript shall contain the Assessor's evaluative notes and the connection to the applicable Codex Doctrine, but shall not disclose the numerical threshold values applicable to the Task.</p>
-    </section>
+  <div class="card" id="L">
+    <h2>L) Data Protection</h2>
+    <h3>L.1</h3>
+    <p>The parties acknowledge that the collection, storage, and processing of personal data under this Agreement is subject to the Digital Personal Data Protection Act 2023 and all applicable data protection laws of India.</p>
+    <h3>L.2</h3>
+    <p>For the purposes of this Agreement, the parties shall act as Data Fiduciaries within their respective spheres of responsibility, defined as follows:</p>
+    <h4>L.2(a)</h4>
+    <p>The OPC shall act as Data Fiduciary in respect of Candidate personal data collected and processed during the Assessment.</p>
+    <h4>L.2(b)</h4>
+    <p>The Client shall act as Data Fiduciary in respect of Assessment outputs and Candidate data retained for hiring decisions following handover by the OPC.</p>
+    <h3>L.3</h3>
+    <p>The OPC shall collect and process the following personal data solely for the purpose of conducting Assessments under this Agreement:</p>
+    <h4>L.3(a)</h4>
+    <p>Candidate name, email address, and contact number.</p>
+    <h4>L.3(b)</h4>
+    <p>Assessment scores, transcripts, and Assessor evaluative notes.</p>
+    <h4>L.3(c)</h4>
+    <p>Client business email and contact details.</p>
+    <h3>L.4</h3>
+    <p>Personal data collected under L.3(a) and L.3(b) shall be retained for a period of three (3) years and one (1) month from the date of Assessment completion, in accordance with the limitation periods prescribed under the Limitation Act 1963, and deleted thereafter unless a legal hold is active under L.5.</p>
+    <h3>L.5</h3>
+    <p>Where a formal dispute, arbitration, or legal proceeding involving an Assessment is active, all data relating to that Assessment shall be subject to a legal hold and shall not be deleted until the proceedings are finally resolved, regardless of the retention period under L.4.</p>
+    <h3>L.6</h3>
+    <p>The OPC shall implement appropriate technical and organisational measures to protect personal data against unauthorised access, disclosure, alteration, or destruction during the retention period.</p>
+    <h3>L.7</h3>
+    <p>Candidates shall have the following rights in respect of their personal data held by the OPC:</p>
+    <h4>L.7(a)</h4>
+    <p>The right to access their personal data upon written request.</p>
+    <h4>L.7(b)</h4>
+    <p>The right to correction of inaccurate personal data.</p>
+    <h4>L.7(c)</h4>
+    <p>The right to erasure of personal data, subject to the retention obligations under L.4 and any active legal hold under L.5.</p>
+    <h3>L.8</h3>
+    <p>The Client shall not use Candidate personal data received from the OPC for any purpose other than the hiring decision for which the Assessment was commissioned. The Client shall implement appropriate measures to protect such data in accordance with the DPDPA 2023.</p>
+    <h3>L.9</h3>
+    <p>Any breach of personal data security shall be reported by the discovering party to the other party within seventy-two (72) hours of becoming aware of the breach, in accordance with the notification requirements of the DPDPA 2023.</p>
+  </div>
 
-    <!-- L -->
-    <section class="clause" id="L">
-      <h2 class="clause-title">L) Data Protection</h2>
-      <h3 class="subclause">L.1</h3>
-      <p>The parties acknowledge that the collection, storage, and processing of personal data under this Agreement is subject to the Digital Personal Data Protection Act 2023 and all applicable data protection laws of India.</p>
-      <h3 class="subclause">L.2</h3>
-      <p>For the purposes of this Agreement, the parties shall act as Data Fiduciaries within their respective spheres of responsibility, defined as follows:</p>
-      <h4 class="subsubclause">L.2(a)</h4>
-      <p>The OPC shall act as Data Fiduciary in respect of Candidate personal data collected and processed during the Assessment.</p>
-      <h4 class="subsubclause">L.2(b)</h4>
-      <p>The Client shall act as Data Fiduciary in respect of Assessment outputs and Candidate data retained for hiring decisions following handover by the OPC.</p>
-      <h3 class="subclause">L.3</h3>
-      <p>The OPC shall collect and process the following personal data solely for the purpose of conducting Assessments under this Agreement:</p>
-      <h4 class="subsubclause">L.3(a)</h4>
-      <p>Candidate name, email address, and contact number.</p>
-      <h4 class="subsubclause">L.3(b)</h4>
-      <p>Assessment scores, transcripts, and Assessor evaluative notes.</p>
-      <h4 class="subsubclause">L.3(c)</h4>
-      <p>Client business email and contact details.</p>
-      <h3 class="subclause">L.4</h3>
-      <p>Personal data collected under L.3(a) and L.3(b) shall be retained for a period of three (3) years and one (1) month from the date of Assessment completion, in accordance with the limitation periods prescribed under the Limitation Act 1963, and deleted thereafter unless a legal hold is active under L.5.</p>
-      <h3 class="subclause">L.5</h3>
-      <p>Where a formal dispute, arbitration, or legal proceeding involving an Assessment is active, all data relating to that Assessment shall be subject to a legal hold and shall not be deleted until the proceedings are finally resolved, regardless of the retention period under L.4.</p>
-      <h3 class="subclause">L.6</h3>
-      <p>The OPC shall implement appropriate technical and organisational measures to protect personal data against unauthorised access, disclosure, alteration, or destruction during the retention period.</p>
-      <h3 class="subclause">L.7</h3>
-      <p>Candidates shall have the following rights in respect of their personal data held by the OPC:</p>
-      <h4 class="subsubclause">L.7(a)</h4>
-      <p>The right to access their personal data upon written request.</p>
-      <h4 class="subsubclause">L.7(b)</h4>
-      <p>The right to correction of inaccurate personal data.</p>
-      <h4 class="subsubclause">L.7(c)</h4>
-      <p>The right to erasure of personal data, subject to the retention obligations under L.4 and any active legal hold under L.5.</p>
-      <h3 class="subclause">L.8</h3>
-      <p>The Client shall not use Candidate personal data received from the OPC for any purpose other than the hiring decision for which the Assessment was commissioned. The Client shall implement appropriate measures to protect such data in accordance with the DPDPA 2023.</p>
-      <h3 class="subclause">L.9</h3>
-      <p>Any breach of personal data security shall be reported by the discovering party to the other party within seventy-two (72) hours of becoming aware of the breach, in accordance with the notification requirements of the DPDPA 2023.</p>
-    </section>
+  <div class="card" id="M">
+    <h2>M) Force Majeure</h2>
+    <h3>M.1</h3>
+    <p>Neither party shall be liable for any failure or delay in performing its obligations under this Agreement where such failure or delay results directly from an event beyond that party's reasonable control, including but not limited to:</p>
+    <h4>M.1(a)</h4>
+    <p>Natural disasters, including flood, earthquake, or cyclone.</p>
+    <h4>M.1(b)</h4>
+    <p>Government orders, regulatory prohibitions, or legislative action.</p>
+    <h4>M.1(c)</h4>
+    <p>War, civil unrest, or riots.</p>
+    <h4>M.1(d)</h4>
+    <p>Pandemic or epidemic declared by a competent governmental or public health authority.</p>
+    <h4>M.1(e)</h4>
+    <p>Infrastructure failure beyond the affected party's control, including failure of power or internet services.</p>
+    <h3>M.2</h3>
+    <p>The affected party shall notify the other party in writing within seven (7) days of becoming aware of a Force Majeure event, identifying the nature of the event and its anticipated duration. Failure to notify within this period shall disentitle the affected party from invoking this Clause.</p>
+    <h3>M.3</h3>
+    <p>Upon a valid Force Majeure event, all Assessment procedures shall be suspended for the duration of the event. Both parties shall resume their obligations as soon as reasonably practicable following the cessation of the event.</p>
+    <h3>M.4</h3>
+    <p>If a Force Majeure event persists for more than thirty (30) days from the date of the notice under M.2, either party may terminate this Agreement by written notice. Where termination arises under this Clause, the Client shall be entitled to a refund of fifty percent (50%) of the upfront fee paid, in accordance with the refund structure under Clause I.5.</p>
+    <h3>M.5</h3>
+    <p>The party invoking Force Majeure shall take all reasonable steps to mitigate the effects of the event and resume performance as soon as practicable.</p>
+  </div>
 
-    <!-- M -->
-    <section class="clause" id="M">
-      <h2 class="clause-title">M) Force Majeure</h2>
-      <h3 class="subclause">M.1</h3>
-      <p>Neither party shall be liable for any failure or delay in performing its obligations under this Agreement where such failure or delay results directly from an event beyond that party's reasonable control, including but not limited to:</p>
-      <h4 class="subsubclause">M.1(a)</h4>
-      <p>Natural disasters, including flood, earthquake, or cyclone.</p>
-      <h4 class="subsubclause">M.1(b)</h4>
-      <p>Government orders, regulatory prohibitions, or legislative action.</p>
-      <h4 class="subsubclause">M.1(c)</h4>
-      <p>War, civil unrest, or riots.</p>
-      <h4 class="subsubclause">M.1(d)</h4>
-      <p>Pandemic or epidemic declared by a competent governmental or public health authority.</p>
-      <h4 class="subsubclause">M.1(e)</h4>
-      <p>Infrastructure failure beyond the affected party's control, including failure of power or internet services.</p>
-      <h3 class="subclause">M.2</h3>
-      <p>The affected party shall notify the other party in writing within seven (7) days of becoming aware of a Force Majeure event, identifying the nature of the event and its anticipated duration. Failure to notify within this period shall disentitle the affected party from invoking this Clause.</p>
-      <h3 class="subclause">M.3</h3>
-      <p>Upon a valid Force Majeure event, all Assessment procedures shall be suspended for the duration of the event. Both parties shall resume their obligations as soon as reasonably practicable following the cessation of the event.</p>
-      <h3 class="subclause">M.4</h3>
-      <p>If a Force Majeure event persists for more than thirty (30) days from the date of the notice under M.2, either party may terminate this Agreement by written notice. Where termination arises under this Clause, the Client shall be entitled to a refund of fifty percent (50%) of the upfront fee paid, in accordance with the refund structure under Clause I.5.</p>
-      <h3 class="subclause">M.5</h3>
-      <p>The party invoking Force Majeure shall take all reasonable steps to mitigate the effects of the event and resume performance as soon as practicable.</p>
-    </section>
+  <div class="card" id="N">
+    <h2>N) General Provisions</h2>
+    <h3>N.1</h3>
+    <p>Any written notice required under this Agreement shall be delivered by email to the last known business email address of the receiving party, or by registered post to their registered business address. A notice delivered by email shall be deemed received on the date of successful transmission. A notice delivered by registered post shall be deemed received three (3) business days after posting.</p>
+    <h3>N.2</h3>
+    <p>No amendment to this Agreement shall be valid unless made in writing and signed by authorised representatives of both parties.</p>
+  </div>
 
-    <!-- N -->
-    <section class="clause" id="N">
-      <h2 class="clause-title">N) General Provisions</h2>
-      <h3 class="subclause">N.1</h3>
-      <p>Any written notice required under this Agreement shall be delivered by email to the last known business email address of the receiving party, or by registered post to their registered business address. A notice delivered by email shall be deemed received on the date of successful transmission. A notice delivered by registered post shall be deemed received three (3) business days after posting.</p>
-      <h3 class="subclause">N.2</h3>
-      <p>No amendment to this Agreement shall be valid unless made in writing and signed by authorised representatives of both parties.</p>
-    </section>
-
-  </div><!-- end doc-body -->
 </main>
 
-<footer>
-  © 2026 H-Baidwan. All rights reserved. &nbsp;·&nbsp; Terms &amp; Conditions of Engagement V1.0 &nbsp;·&nbsp; Governed by the laws of India.
-</footer>
+<footer>&copy; 2026 H-Baidwan. All rights reserved. &nbsp;·&nbsp; Terms &amp; Conditions of Engagement V1.0 &nbsp;·&nbsp; Governed by the laws of India.</footer>
+
+<script>
+window.addEventListener("scroll", function() {
+  const header = document.getElementById("pageHeader");
+  if (window.scrollY > 50) header.classList.add("shrink");
+  else header.classList.remove("shrink");
+});
+</script>
 
 </body>
 </html>
