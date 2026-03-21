@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Codex — The Codex's Spectrum</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+  background: linear-gradient(to right, #f2f4f8, #e6ebf2);
+  color: #222;
+  padding-top: 80px;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  padding: 20px 30px;
+  font-size: 1.3em;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 1000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.3s;
+}
+header.shrink { padding: 10px 20px; font-size: 1.1em; }
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
+
+/* INTRO CARD */
+.intro-card {
+  background: #fff;
+  padding: 36px 35px 28px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border-top: 4px solid #2c5364;
+}
+.intro-card h1 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #0f2027;
+  margin-bottom: 12px;
+}
+.intro-card p {
+  font-size: 0.95em;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* NAV CARD */
+.nav-card {
+  background: #fff;
+  padding: 28px 35px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border-left: 4px solid #4CAF50;
+}
+.nav-category {
+  margin-bottom: 22px;
+}
+.nav-category:last-child { margin-bottom: 0; }
+.nav-category h2 {
+  font-size: 0.75em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e6ebf2;
+}
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.nav-links a {
+  color: #2c5364;
+  text-decoration: none;
+  font-size: 0.88em;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: #f2f4f8;
+  transition: all 0.2s;
+}
+.nav-links a:hover {
+  background: #2c5364;
+  color: white;
+}
+.nav-links a.placeholder {
+  color: #aaa;
+  background: #f8f8f8;
+  cursor: default;
+  font-style: italic;
+}
+.nav-links a.placeholder:hover {
+  background: #f8f8f8;
+  color: #aaa;
+}
+
+/* DOCTRINE CARDS */
+.card {
+  background: #fff;
+  padding: 30px 35px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,0.15); }
+
+/* DOCTRINE TITLE */
+.card h2.doctrine-title {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #0f2027;
+  margin-bottom: 4px;
+}
+.card .doctrine-class {
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #4CAF50;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #e6ebf2;
+}
+
+/* SECTION HEADINGS */
+.card h3.section-title {
+  font-size: 1em;
+  font-weight: 700;
+  color: #203a43;
+  margin-top: 24px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.card h3.section-title-irregular {
+  font-size: 1em;
+  font-weight: 700;
+  color: #203a43;
+  margin-top: 24px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-style: normal;
+}
+.card h3.section-title-irregular span {
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* STRUCTURE POINTS */
+.structure-point {
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+.structure-point h4 {
+  font-size: 0.95em;
+  font-weight: 700;
+  color: #0f2027;
+  margin-bottom: 4px;
+}
+.structure-point p {
+  font-size: 0.93em;
+  color: #333;
+  margin-bottom: 6px;
+}
+.structure-point .example {
+  font-style: italic;
+  color: #555;
+  padding-left: 16px;
+  border-left: 2px solid #e6ebf2;
+  margin-top: 6px;
+  font-size: 0.92em;
+}
+
+/* SEMICOLONIAL BOX */
+.semicolonial-uses {
+  margin-top: 12px;
+}
+.semicolonial-use {
+  margin-top: 14px;
+  padding-left: 16px;
+  border-left: 2px solid #e6ebf2;
+}
+.semicolonial-use h5 {
+  font-size: 0.88em;
+  font-weight: 700;
+  color: #2c5364;
+  margin-bottom: 3px;
+}
+.semicolonial-use p {
+  font-size: 0.9em;
+  color: #444;
+  margin-bottom: 4px;
+}
+.semicolonial-use .example {
+  font-style: italic;
+  color: #555;
+  font-size: 0.9em;
+}
+
+/* SPECIMENS */
+.specimen {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid #f0f0f0;
+}
+.specimen:first-child { border-top: none; padding-top: 0; }
+.specimen h4 {
+  font-size: 0.92em;
+  font-weight: 700;
+  color: #0f2027;
+  margin-bottom: 3px;
+}
+.specimen .scenario {
+  font-size: 0.85em;
+  color: #888;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+.specimen .prompt {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 8px;
+  padding-left: 14px;
+  border-left: 2px solid #e6ebf2;
+}
+.specimen blockquote {
+  font-size: 0.93em;
+  color: #222;
+  line-height: 1.8;
+  padding: 14px 18px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  border-left: 3px solid #2c5364;
+  margin-top: 6px;
+  font-style: italic;
+}
+
+p { margin: 6px 0 10px; font-size: 0.95em; color: #333; }
+
+/* PLACEHOLDER CARD */
+.card.placeholder-card {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.card.placeholder-card h2 {
+  color: #999;
+}
+.placeholder-label {
+  font-size: 0.82em;
+  color: #bbb;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+footer { text-align: center; font-size: 0.8em; color: #888; margin: 40px 0 20px; }
+
+@media (max-width: 640px) {
+  .card { padding: 22px 18px; }
+  .intro-card { padding: 24px 18px; }
+  .intro-card h1 { font-size: 1.5em; }
+  .nav-card { padding: 22px 18px; }
+}
+</style>
+</head>
+<body>
+
+<header id="pageHeader">The Codex's Spectrum</header>
+
+<main>
+
+  <!-- INTRO -->
+  <div class="intro-card">
+    <h1>The Codex's Spectrum</h1>
+    <p>The Codex, for short, measures linguistic skills. It is organised into three categories: Styles, Registers, Skills. All Doctrines are free to read. Assessments require purchasing a consultation by the OPC.</p>
+  </div>
+
+  <!-- NAVIGATION -->
+  <div class="nav-card">
+
+    <div class="nav-category">
+      <h2>Styles</h2>
+      <div class="nav-links">
+        <a href="#victorian-english">Victorian English</a>
+        <a href="#casual-english" class="placeholder">Casual English</a>
+        <a href="#polished-english" class="placeholder">Polished English</a>
+        <a href="#performative-english" class="placeholder">Performative English</a>
+        <a href="#philosophers-english" class="placeholder">Philosopher's English</a>
+        <a href="#early-modern-english" class="placeholder">Early Modern English</a>
+      </div>
+    </div>
+
+    <div class="nav-category">
+      <h2>Registers</h2>
+      <div class="nav-links">
+        <a href="#legal-register" class="placeholder">Legal</a>
+        <a href="#medical-register" class="placeholder">Medical</a>
+        <a href="#diplomatic-register" class="placeholder">Diplomatic</a>
+        <a href="#academic-register" class="placeholder">Academic</a>
+        <a href="#business-register" class="placeholder">Business</a>
+        <a href="#technical-register" class="placeholder">Technical</a>
+      </div>
+    </div>
+
+    <div class="nav-category">
+      <h2>Skills</h2>
+      <div class="nav-links">
+        <a href="#minimising" class="placeholder">Minimising</a>
+        <a href="#maximising" class="placeholder">Maximising</a>
+        <a href="#pacing" class="placeholder">Pacing</a>
+        <a href="#storytelling" class="placeholder">Storytelling</a>
+        <a href="#control" class="placeholder">Control</a>
+        <a href="#understanding" class="placeholder">Understanding</a>
+        <a href="#contextual-framing" class="placeholder">Contextual Framing</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- VICTORIAN ENGLISH -->
+  <div class="card" id="victorian-english">
+    <h2 class="doctrine-title">Victorian English</h2>
+    <div class="doctrine-class">Class: Style</div>
+
+    <h3 class="section-title">What It Is</h3>
+    <p>Victorian English is the style of abstraction and elegance, to convey meaning in such a tone that the reader begins to perceive the subject as timeless. It often uses archaic vocabulary to add weight.</p>
+
+    <h3 class="section-title-irregular">The Structure, <span>as defined</span></h3>
+
+    <div class="structure-point">
+      <h4>1. Nested Clauses</h4>
+      <p>Commas are present in each abstraction, extension, or other approaches used to delay the main meaning of the thought, to have the reader pause at the moment the writer desires.</p>
+      <div class="example">"The wind, restless as it is, begins to assert itself-"</div>
+    </div>
+
+    <div class="structure-point">
+      <h4>2. The Delayed Meaning</h4>
+      <p>The Main Subject is introduced early but is starved off the complete reveal towards the end, as it gains momentum from the nested clauses. The delay is introduced before the main verb, not after it.</p>
+    </div>
+
+    <div class="structure-point">
+      <h4>3. Abstraction As The Definer</h4>
+      <p>The Main Subject gets broken into fragments that define the meaning behind it, adding weight, making the reader visualise it.</p>
+    </div>
+
+    <div class="structure-point">
+      <h4>4. Final Word</h4>
+      <p>The Final Word of the sentence has to be worthy of all the momentum brought upon it. The Final Word is the stamp on the paper.</p>
+    </div>
+
+    <div class="structure-point">
+      <h4>5. Clause Coordination</h4>
+      <p>Each nest is distinctive; Each nest has its own fragment to express. The nested clauses shall not repeat themselves but rather accumulate as the definitive truth.</p>
+    </div>
+
+    <div class="structure-point">
+      <h4>6. The Semicolonial Box</h4>
+      <p>Victorian English uses semicolons in ways standard grammar does not permit, entirely for Pacing.</p>
+      <div class="semicolonial-uses">
+        <div class="semicolonial-use">
+          <h5>Use 1 — The Conjunctive Pause</h5>
+          <p>Uses a standard conjunctive adverb inside a Semicolonial Box for weight.</p>
+          <div class="example">"; therefore,"</div>
+        </div>
+        <div class="semicolonial-use">
+          <h5>Use 2 — The Transitional Phrase</h5>
+          <p>Crafts a concise phrase for the same purpose as Use 1 inside the Box.</p>
+          <div class="example">"; and thus,"</div>
+        </div>
+        <div class="semicolonial-use">
+          <h5>Use 3 — The Isolated Phrase</h5>
+          <p>Places a specific phrase that would have been outside the Box in standard grammar inside it, to have the remainder echo louder.</p>
+          <div class="example">"; yet the wound, remained open"</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="section-title">Illustrative Examples</h3>
+
+    <div class="specimen">
+      <h4>1. Solitary Observation</h4>
+      <p class="scenario">The subject stands at a window and observes snowfall.</p>
+      <blockquote>"There is, in the descent of snow, a quality which the eye receives before the mind has found the language for it; hence, the observer standing at the glass becomes aware not of cold or whiteness but of something altogether quieter, a correction the world makes on such mornings, into a stillness that plain hours are too crowded to permit."</blockquote>
+    </div>
+
+    <div class="specimen">
+      <h4>2. Private Grief</h4>
+      <p class="scenario">The subject writes about losing a sister.</p>
+      <blockquote>"She did not leave as the dying are sometimes said to leave, by degrees that allow the living to prepare themselves in advance of the loss; and still the absence, arriving without negotiation, without the mercy of gradual withdrawal, became not a wound to be dressed but a silence to be inhabited, the kind that persists in the intervals between thought, where habit continues long after the conditions that produced it have ceased to exist."</blockquote>
+    </div>
+
+    <div class="specimen">
+      <h4>3. Attention's Nature</h4>
+      <p class="scenario">The subject comments on the cost of attention.</p>
+      <blockquote>"For it must be observed that the mind, when perpetually summoned from one object to another by the ceaseless provocations of modern contrivance, loses not its capacity for thought, but its rightful opportunity for repose; and thus attention, deprived of the silence in which it gathers strength, becomes scattered, not through moral failing, but through the unrelenting demands placed upon it."</blockquote>
+    </div>
+
+    <div class="specimen">
+      <h4>4. Conversation on War</h4>
+      <p class="scenario">A friend writes: "I cannot make sense of it. Young men sent to fields they have never seen, for causes they were never consulted on. Is there any justification that holds?"</p>
+      <p class="scenario">The subject replies:</p>
+      <blockquote>"I have looked, as you have looked, for the argument that resolves it; wherein the search itself, pursued long enough, becomes the discovery, that we have been looking for justification where there is only explanation, and have mistaken the latter for the former because the grief, were it to go unanswered, would be too heavy to carry without something to set against it."</blockquote>
+    </div>
+
+    <div class="specimen">
+      <h4>5. Conversation on Architecture</h4>
+      <p class="scenario">An architect says: "I worried through the entire construction that the proportions of the eastern facade would overwhelm the entrance. Looking at it now I am not certain my worry was misplaced."</p>
+      <p class="scenario">The subject replies:</p>
+      <blockquote>"Your worry was not misplaced so much as premature; yet the facade, which you feared would overwhelm, does instead what only the most considered structures permit themselves to do, it announces rather than dominates, it justifies its own scale in the relationship between the stone and the light it receives at this hour, which I do not believe you entirely planned, and which is, for that reason, the most honest thing about it."</blockquote>
+    </div>
+
+  </div>
+
+  <!-- CASUAL ENGLISH PLACEHOLDER -->
+  <div class="card placeholder-card" id="casual-english">
+    <h2 class="doctrine-title">Casual English</h2>
+    <div class="doctrine-class">Class: Style</div>
+    <p class="placeholder-label">Doctrine in preparation.</p>
+  </div>
+
+  <!-- POLISHED ENGLISH PLACEHOLDER -->
+  <div class="card placeholder-card" id="polished-english">
+    <h2 class="doctrine-title">Polished English</h2>
+    <div class="doctrine-class">Class: Style</div>
+    <p class="placeholder-label">Doctrine in preparation.</p>
+  </div>
+
+  <!-- PERFORMATIVE ENGLISH PLACEHOLDER -->
+  <div class="card placeholder-card" id="performative-english">
+    <h2 class="doctrine-title">Performative English</h2>
+    <div class="doctrine-class">Class: Style</div>
+    <p class="placeholder-label">Doctrine in preparation.</p>
+  </div>
+
+  <!-- PHILOSOPHER'S ENGLISH PLACEHOLDER -->
+  <div class="card placeholder-card" id="philosophers-english">
+    <h2 class="doctrine-title">Philosopher's English</h2>
+    <div class="doctrine-class">Class: Style</div>
+    <p class="placeholder-label">Doctrine in preparation.</p>
+  </div>
+
+  <!-- EARLY MODERN ENGLISH PLACEHOLDER -->
+  <div class="card placeholder-card" id="early-modern-english">
+    <h2 class="doctrine-title">Early Modern English</h2>
+    <div class="doctrine-class">Class: Style</div>
+    <p class="placeholder-label">Doctrine in preparation.</p>
+  </div>
+
+  <!-- LEGAL REGISTER PLACEHOLDER -->
+  <div class="card placeholder-card" id="legal-register">
+    <h2 class="doctrine-title">Legal Register</h2>
+    <div class="doctrine-class">Class: Register</div>
+    <p class="placeholder-label">Doctrine in preparation.</p>
+  </div>
+
+  <!-- MEDICAL REGISTER PLACEHOLDER -->
+  <div class="card placeholder-card" id="medical-register">
+    <h2 class="doctrine-title">Medical Register</h2>
+    <div class="doctrine-class">Class: Register</div>
+    <p class="placeholder-label">Doctrine in preparation.</p>
+  </div>
+
+  <!-- DIPLOMATIC REGISTER PLACEHOLDER -->
+  <div class="card placeholder-card" id="diplomatic-register">
+    <h2 class="doctrine-title">Diplomatic Register</h2>
+    <div class="doctrine-class">Class: Register</div>
+    <p class="placeholder-label">Doctrine in preparation.</p>
+  </div>
+
+  <!-- ACADEMIC REGISTER PLACEHOLDER -->
+  <div class="card placeholder-card" id="academic-register">
+    <h2 class="doctrine-title">Academic Register</h2>
+    <div class="doctrine-class">Class: Register</div>
+    <p class="placeholder-label">Doctrine in preparation.</p>
+  </div>
+
+  <!-- BUSINESS REGISTER PLACEHOLDER -->
+  <div class="card placeholder-card" id="business-register">
+    <h2 class="doctrine-title">Business Register</h2>
+    <div class="doctrine-class">Class: Register</div>
+    <p class="placeholder-label">Doctrine in preparation.</p>
+  </div>
+
+  <!-- TECHNICAL REGISTER PLACEHOLDER -->
+  <div class="card placeholder-card" id="technical-register">
+    <h2 class="doctrine-title">Technical Register</h2>
+    <div class="doctrine-class">Class: Register</div>
+    <p class="placeholder-label">Doctrine in preparation.</p>
+  </div>
+
+  <!-- MINIMISING PLACEHOLDER -->
+  <div class="card placeholder-card" id="minimising">
+    <h2 class="doctrine-title">Minimising</h2>
+    <div class="doctrine-class">Class: Skill</div>
+    <p class="placeholder-label">Doctrine in preparation.</p>
+  </div>
+
+  <!-- MAXIMISING PLACEHOLDER -->
+  <div class="card placeholder-card" id="maximising">
+    <h2 class="doctrine-title">Maximising</h2>
+    <div class="doctrine-class">Class: Skill</div>
+    <p class="placeholder-label">Doctrine in preparation.</p>
+  </div>
+
+  <!-- PACING PLACEHOLDER -->
+  <div class="card placeholder-card" id="pacing">
+    <h2 class="doctrine-title">Pacing</h2>
+    <div class="doctrine-class">Class: Skill</div>
+    <p class="placeholder-label">Doctrine in preparation.</p>
+  </div>
+
+  <!-- STORYTELLING PLACEHOLDER -->
+  <div class="card placeholder-card" id="storytelling">
+    <h2 class="doctrine-title">Storytelling</h2>
+    <div class="doctrine-class">Class: Skill</div>
+    <p class="placeholder-label">Doctrine in preparation.</p>
+  </div>
+
+  <!-- CONTROL PLACEHOLDER -->
+  <div class="card placeholder-card" id="control">
+    <h2 class="doctrine-title">Control</h2>
+    <div class="doctrine-class">Class: Skill</div>
+    <p class="placeholder-label">Doctrine in preparation.</p>
+  </div>
+
+  <!-- UNDERSTANDING PLACEHOLDER -->
+  <div class="card placeholder-card" id="understanding">
+    <h2 class="doctrine-title">Understanding</h2>
+    <div class="doctrine-class">Class: Skill</div>
+    <p class="placeholder-label">Doctrine in preparation.</p>
+  </div>
+
+  <!-- CONTEXTUAL FRAMING PLACEHOLDER -->
+  <div class="card placeholder-card" id="contextual-framing">
+    <h2 class="doctrine-title">Contextual Framing</h2>
+    <div class="doctrine-class">Class: Skill</div>
+    <p class="placeholder-label">Doctrine in preparation.</p>
+  </div>
+
+</main>
+
+<footer>&copy; 2026 H-Baidwan. All rights reserved. &nbsp;·&nbsp; The Codex's Spectrum</footer>
+
+<script>
+window.addEventListener("scroll", function() {
+  const header = document.getElementById("pageHeader");
+  if (window.scrollY > 50) header.classList.add("shrink");
+  else header.classList.remove("shrink");
+});
+</script>
+
+</body>
+</html>
