@@ -87,7 +87,6 @@ main { max-width: 900px; margin: 0 auto; padding: 20px 20px; }
   background: #f9f9f9; border-radius: 6px; border-left: 3px solid #2c5364;
   margin-top: 6px; font-style: italic;
 }
-/* DEFINITIONS SECTION */
 .definitions-section { margin-top: 28px; padding-top: 22px; border-top: 2px solid #e6ebf2; }
 .definition-entry { margin-top: 18px; }
 .definition-entry h4 { font-size: 0.95em; font-weight: 700; color: #0f2027; margin-bottom: 6px; }
@@ -97,6 +96,8 @@ main { max-width: 900px; margin: 0 auto; padding: 20px 20px; }
   background: #f9f9f9; border-radius: 6px; border-left: 3px solid #2c5364;
   margin-top: 6px; font-style: italic;
 }
+.definition-entry a { color: #2c5364; font-weight: 600; text-decoration: none; border-bottom: 1px solid #2c5364; }
+.definition-entry a:hover { color: #4CAF50; border-bottom-color: #4CAF50; }
 p { margin: 6px 0 10px; font-size: 0.95em; color: #333; }
 .card.placeholder-card { opacity: 0.5; pointer-events: none; }
 .card.placeholder-card h2 { color: #999; }
@@ -140,7 +141,6 @@ footer { text-align: center; font-size: 0.8em; color: #888; margin: 40px 0 20px;
         <a href="#diplomatic-register" class="placeholder">Diplomatic</a>
         <a href="#academic-register" class="placeholder">Academic</a>
         <a href="#business-register" class="placeholder">Business</a>
-        <a href="#technical-register" class="placeholder">Technical</a>
       </div>
     </div>
     <div class="nav-category">
@@ -152,18 +152,18 @@ footer { text-align: center; font-size: 0.8em; color: #888; margin: 40px 0 20px;
         <a href="#storytelling" class="placeholder">Storytelling</a>
         <a href="#control" class="placeholder">Control</a>
         <a href="#understanding" class="placeholder">Understanding</a>
-        <a href="#contextual-framing" class="placeholder">Contextual Framing</a>
+        <a href="#framing" class="placeholder">Framing</a>
       </div>
     </div>
   </div>
 
   <div class="card" id="victorian-english">
     <h2 class="doctrine-title">Victorian English</h2>
-    <div class="doctrine-class">Class: Style</div>
+    <div class="doctrine-class">Class: Style &nbsp;·&nbsp; VIC</div>
 
 ```
 <h3 class="section-title">What It Is</h3>
-<p>Victorian English is the style of abstraction and elegance, to convey meaning in such a tone that the reader begins to perceive the subject as timeless. It often uses archaic vocabulary to add weight.</p>
+<p>Victorian English is the style of abstraction and elegance, to convey meaning in such a tone that the reader begins to perceive the subject as timeless. It often uses elevated vocabulary to add weight.</p>
 
 <h3 class="section-title-irregular">The Structure, <span>as defined</span></h3>
 
@@ -254,10 +254,17 @@ footer { text-align: center; font-size: 0.8em; color: #888; margin: 40px 0 20px;
 
   <div class="definition-entry">
     <h4>1. "Final Word" — "Heavy"</h4>
-    <p>A Final Word is a word that is <strong>lexical</strong> — one that carries standalone meaning without relying on function words such as intensifiers, comparatives, or connectives to complete it.</p>
+    <p>A Final Word is a word that is <strong>lexical</strong>, one that carries standalone meaning without relying on function words such as intensifiers, comparatives, or connectives to complete it.</p>
     <p>A lexical word can also be an ordinary word in everyday life but has the potential of sounding Heavy if given the right momentum as described in the Structure. An example for a word like "Jurisdiction":</p>
     <blockquote>"The courtroom, filled of paperwork from centuries ago, a verdict on its run, delivered by none other than the Jurisdiction."</blockquote>
   </div>
+
+  <div class="definition-entry">
+    <h4>2. "Elevated Vocabulary"</h4>
+    <p>Elevated vocabulary refers to words consistent with the literary tradition of Victorian prose, words that carry formal weight without belonging to a specialist domain such as law, medicine, or science.</p>
+    <p>A non-exhaustive reference list is provided in <a href="/codex/appendix-vic">Appendix VIC</a>. Words outside the Appendix are not automatically disqualified. The Assessor evaluates whether the word serves the sentence's weight in a manner consistent with the tradition demonstrated in the Illustrative Examples and Definition 1.</p>
+  </div>
+
 </div>
 ```
 
@@ -265,97 +272,91 @@ footer { text-align: center; font-size: 0.8em; color: #888; margin: 40px 0 20px;
 
   <div class="card placeholder-card" id="performative-english">
     <h2 class="doctrine-title">Performative English</h2>
-    <div class="doctrine-class">Class: Style</div>
+    <div class="doctrine-class">Class: Style &nbsp;·&nbsp; PER</div>
     <p class="placeholder-label">Doctrine in preparation.</p>
   </div>
 
   <div class="card placeholder-card" id="philosophers-english">
     <h2 class="doctrine-title">Philosopher's English</h2>
-    <div class="doctrine-class">Class: Style</div>
+    <div class="doctrine-class">Class: Style &nbsp;·&nbsp; PHI</div>
     <p class="placeholder-label">Doctrine in preparation.</p>
   </div>
 
   <div class="card placeholder-card" id="early-modern-english">
     <h2 class="doctrine-title">Early Modern English</h2>
-    <div class="doctrine-class">Class: Style</div>
+    <div class="doctrine-class">Class: Style &nbsp;·&nbsp; EME</div>
     <p class="placeholder-label">Doctrine in preparation.</p>
   </div>
 
   <div class="card placeholder-card" id="legal-register">
     <h2 class="doctrine-title">Legal Register</h2>
-    <div class="doctrine-class">Class: Register</div>
+    <div class="doctrine-class">Class: Register &nbsp;·&nbsp; LEG</div>
     <p class="placeholder-label">Doctrine in preparation.</p>
   </div>
 
   <div class="card placeholder-card" id="medical-register">
     <h2 class="doctrine-title">Medical Register</h2>
-    <div class="doctrine-class">Class: Register</div>
+    <div class="doctrine-class">Class: Register &nbsp;·&nbsp; MED</div>
     <p class="placeholder-label">Doctrine in preparation.</p>
   </div>
 
   <div class="card placeholder-card" id="diplomatic-register">
     <h2 class="doctrine-title">Diplomatic Register</h2>
-    <div class="doctrine-class">Class: Register</div>
+    <div class="doctrine-class">Class: Register &nbsp;·&nbsp; DIP</div>
     <p class="placeholder-label">Doctrine in preparation.</p>
   </div>
 
   <div class="card placeholder-card" id="academic-register">
     <h2 class="doctrine-title">Academic Register</h2>
-    <div class="doctrine-class">Class: Register</div>
+    <div class="doctrine-class">Class: Register &nbsp;·&nbsp; ACA</div>
     <p class="placeholder-label">Doctrine in preparation.</p>
   </div>
 
   <div class="card placeholder-card" id="business-register">
     <h2 class="doctrine-title">Business Register</h2>
-    <div class="doctrine-class">Class: Register</div>
-    <p class="placeholder-label">Doctrine in preparation.</p>
-  </div>
-
-  <div class="card placeholder-card" id="technical-register">
-    <h2 class="doctrine-title">Technical Register</h2>
-    <div class="doctrine-class">Class: Register</div>
+    <div class="doctrine-class">Class: Register &nbsp;·&nbsp; BUS</div>
     <p class="placeholder-label">Doctrine in preparation.</p>
   </div>
 
   <div class="card placeholder-card" id="minimising">
     <h2 class="doctrine-title">Minimising</h2>
-    <div class="doctrine-class">Class: Skill</div>
+    <div class="doctrine-class">Class: Skill &nbsp;·&nbsp; MIN</div>
     <p class="placeholder-label">Doctrine in preparation.</p>
   </div>
 
   <div class="card placeholder-card" id="maximising">
     <h2 class="doctrine-title">Maximising</h2>
-    <div class="doctrine-class">Class: Skill</div>
+    <div class="doctrine-class">Class: Skill &nbsp;·&nbsp; MAX</div>
     <p class="placeholder-label">Doctrine in preparation.</p>
   </div>
 
   <div class="card placeholder-card" id="pacing">
     <h2 class="doctrine-title">Pacing</h2>
-    <div class="doctrine-class">Class: Skill</div>
+    <div class="doctrine-class">Class: Skill &nbsp;·&nbsp; PAC</div>
     <p class="placeholder-label">Doctrine in preparation.</p>
   </div>
 
   <div class="card placeholder-card" id="storytelling">
     <h2 class="doctrine-title">Storytelling</h2>
-    <div class="doctrine-class">Class: Skill</div>
+    <div class="doctrine-class">Class: Skill &nbsp;·&nbsp; STO</div>
     <p class="placeholder-label">Doctrine in preparation.</p>
   </div>
 
   <div class="card placeholder-card" id="control">
     <h2 class="doctrine-title">Control</h2>
-    <div class="doctrine-class">Class: Skill</div>
+    <div class="doctrine-class">Class: Skill &nbsp;·&nbsp; CON</div>
     <p class="placeholder-label">Doctrine in preparation.</p>
   </div>
 
   <div class="card placeholder-card" id="understanding">
     <h2 class="doctrine-title">Understanding</h2>
-    <div class="doctrine-class">Class: Skill</div>
+    <div class="doctrine-class">Class: Skill &nbsp;·&nbsp; UND</div>
     <p class="placeholder-label">Doctrine in preparation.</p>
   </div>
 
-  <div class="card placeholder-card" id="contextual-framing">
-    <h2 class="doctrine-title">Contextual Framing</h2>
-    <div class="doctrine-class">Class: Skill</div>
+  <div class="card placeholder-card" id="framing">
+    <h2 class="doctrine-title">Framing</h2>
+    <div class="doctrine-class">Class: Skill &nbsp;·&nbsp; FRA</div>
     <p class="placeholder-label">Doctrine in preparation.</p>
   </div>
 
