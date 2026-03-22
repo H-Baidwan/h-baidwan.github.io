@@ -1,1 +1,495 @@
-placeholder
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appendix VIC — The Codex's Spectrum</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+  background: linear-gradient(to right, #f2f4f8, #e6ebf2);
+  color: #222;
+  padding-top: 80px;
+  overflow-x: hidden;
+}
+header {
+  position: fixed; top: 0; left: 0; width: 100%;
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  color: white; padding: 20px 30px; font-size: 1.3em; font-weight: 700;
+  text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 1000; white-space: nowrap; overflow: hidden;
+  text-overflow: ellipsis; transition: all 0.3s;
+}
+header.shrink { padding: 10px 20px; font-size: 1.1em; }
+main { max-width: 900px; margin: 0 auto; padding: 20px 20px; }
+
+.intro-card {
+background: #fff; padding: 36px 35px 28px; margin: 20px 0;
+border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+border-top: 4px solid #2c5364;
+}
+.intro-card h1 { font-size: 2em; font-weight: 700; color: #0f2027; margin-bottom: 8px; }
+.intro-card .doc-meta { font-size: 0.82em; color: #888; margin-bottom: 14px; }
+.intro-card p { font-size: 0.95em; color: #444; line-height: 1.7; margin-bottom: 16px; }
+.return-btn {
+display: inline-block;
+padding: 8px 18px;
+background: #f2f4f8;
+color: #2c5364;
+font-weight: 700;
+font-size: 0.88em;
+text-decoration: none;
+border-radius: 20px;
+border: 1px solid #d0d8e4;
+transition: all 0.2s;
+}
+.return-btn:hover { background: #2c5364; color: white; border-color: #2c5364; }
+
+.nav-card {
+background: #fff; padding: 20px 35px; margin: 20px 0;
+border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+border-left: 4px solid #4CAF50;
+}
+.nav-card h2 {
+font-size: 0.75em; font-weight: 700; letter-spacing: 0.12em;
+text-transform: uppercase; color: #333; margin-bottom: 10px;
+}
+.nav-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.nav-links a {
+color: #2c5364; text-decoration: none; font-size: 0.88em; font-weight: 600;
+padding: 5px 12px; border-radius: 20px; background: #f2f4f8; transition: all 0.2s;
+}
+.nav-links a:hover { background: #2c5364; color: white; }
+
+.family-card {
+background: #fff; padding: 30px 35px; margin: 20px 0;
+border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.family-card h2 {
+font-size: 1.05em; font-weight: 700; color: #0f2027;
+letter-spacing: 0.04em; text-transform: uppercase;
+margin-bottom: 18px; padding-bottom: 10px;
+border-bottom: 2px solid #e6ebf2;
+display: flex; align-items: center; gap: 10px;
+}
+.family-card h2::after {
+content: ‘’; flex: 1; height: 1px; background: #4CAF50; opacity: 0.4;
+}
+
+.word-entry {
+display: grid;
+grid-template-columns: 180px 1fr;
+gap: 8px 20px;
+padding: 10px 0;
+border-bottom: 1px solid #f5f5f5;
+align-items: baseline;
+}
+.word-entry:last-child { border-bottom: none; }
+.word-name {
+font-weight: 700;
+color: #0f2027;
+font-size: 0.93em;
+}
+.word-example {
+font-style: italic;
+color: #555;
+font-size: 0.91em;
+line-height: 1.6;
+}
+
+p { margin: 6px 0 10px; font-size: 0.95em; color: #333; }
+footer { text-align: center; font-size: 0.8em; color: #888; margin: 40px 0 20px; }
+@media (max-width: 640px) {
+.family-card { padding: 22px 18px; }
+.intro-card { padding: 24px 18px; }
+.intro-card h1 { font-size: 1.5em; }
+.nav-card { padding: 16px 18px; }
+.word-entry { grid-template-columns: 1fr; gap: 2px; }
+}
+</style>
+
+</head>
+<body>
+
+<header id="pageHeader">The Codex's Spectrum</header>
+
+<main>
+
+  <div class="intro-card">
+    <h1>Appendix VIC</h1>
+    <p class="doc-meta">Victorian English &nbsp;·&nbsp; Elevated Vocabulary Reference</p>
+    <p>A non-exhaustive reference list of vocabulary consistent with the literary tradition of Victorian prose. Words outside this Appendix are not automatically disqualified. Each entry includes a clause example demonstrating the word within Victorian structure.</p>
+    <a href="https://thecodexsspectrum.github.io/codex/#victorian-english" class="return-btn">← Return to Victorian English</a>
+  </div>
+
+  <div class="nav-card">
+    <h2>Families</h2>
+    <div class="nav-links">
+      <a href="#states-of-mind">States of Mind</a>
+      <a href="#physical-world">The Physical World</a>
+      <a href="#human-conduct">Human Conduct</a>
+      <a href="#time-and-passage">Time and Passage</a>
+      <a href="#judgment-and-reason">Judgment and Reason</a>
+      <a href="#loss-and-absence">Loss and Absence</a>
+      <a href="#power-and-authority">Power and Authority</a>
+      <a href="#nature-and-elements">Nature and Elements</a>
+      <a href="#speech-and-expression">Speech and Expression</a>
+      <a href="#obligation-and-duty">Obligation and Duty</a>
+      <a href="#desire-and-longing">Desire and Longing</a>
+      <a href="#conflict-and-opposition">Conflict and Opposition</a>
+      <a href="#knowledge-and-ignorance">Knowledge and Ignorance</a>
+      <a href="#beauty-and-ruin">Beauty and Ruin</a>
+      <a href="#faith-and-doubt">Faith and Doubt</a>
+    </div>
+  </div>
+
+  <!-- STATES OF MIND -->
+
+  <div class="family-card" id="states-of-mind">
+    <h2>States of Mind</h2>
+    <div class="word-entry"><span class="word-name">Repose</span><span class="word-example">"the mind, denied its repose, begins to fracture at its quieter edges"</span></div>
+    <div class="word-entry"><span class="word-name">Melancholy</span><span class="word-example">"a melancholy, not of circumstance but of constitution, had settled upon him without invitation"</span></div>
+    <div class="word-entry"><span class="word-name">Reverie</span><span class="word-example">"she had slipped, without quite intending it, into a reverie from which the afternoon could not recall her"</span></div>
+    <div class="word-entry"><span class="word-name">Contemplation</span><span class="word-example">"it was in contemplation, not in action, that the weight of the matter made itself fully known"</span></div>
+    <div class="word-entry"><span class="word-name">Anguish</span><span class="word-example">"the anguish was not loud; it was the kind that occupies a room without announcing itself"</span></div>
+    <div class="word-entry"><span class="word-name">Disquiet</span><span class="word-example">"a disquiet had taken root in him, small at first, then occupying every quiet moment he permitted himself"</span></div>
+    <div class="word-entry"><span class="word-name">Perturbation</span><span class="word-example">"the perturbation of his composure, so long preserved, was visible only to those who had known him longest"</span></div>
+    <div class="word-entry"><span class="word-name">Serenity</span><span class="word-example">"a serenity had come over her that those who loved her found more troubling than grief"</span></div>
+    <div class="word-entry"><span class="word-name">Desolation</span><span class="word-example">"the desolation was not in the place but in the certainty that the place would remain when she did not"</span></div>
+    <div class="word-entry"><span class="word-name">Agitation</span><span class="word-example">"the agitation beneath his measured speech was perceptible only in the stillness of his hands"</span></div>
+    <div class="word-entry"><span class="word-name">Resignation</span><span class="word-example">"resignation, when it came, arrived not as defeat but as a long-postponed understanding"</span></div>
+    <div class="word-entry"><span class="word-name">Foreboding</span><span class="word-example">"a foreboding she could neither name nor dismiss had accompanied her since the letter arrived"</span></div>
+    <div class="word-entry"><span class="word-name">Torpor</span><span class="word-example">"the torpor of long grief had made even small decisions feel like expeditions into unknown country"</span></div>
+    <div class="word-entry"><span class="word-name">Exhilaration</span><span class="word-example">"the exhilaration was brief and therefore precious, as all things are that cannot be prolonged without diminishment"</span></div>
+    <div class="word-entry"><span class="word-name">Vexation</span><span class="word-example">"his vexation, contained with effort, expressed itself only in the precision of his subsequent silences"</span></div>
+    <div class="word-entry"><span class="word-name">Solicitude</span><span class="word-example">"her solicitude for his condition exceeded what the occasion seemed, to those outside it, to demand"</span></div>
+    <div class="word-entry"><span class="word-name">Trepidation</span><span class="word-example">"with a trepidation she had not anticipated, she turned toward what she had long claimed to desire"</span></div>
+    <div class="word-entry"><span class="word-name">Consternation</span><span class="word-example">"the consternation of the assembled company was expressed, as consternation often is, in complete silence"</span></div>
+    <div class="word-entry"><span class="word-name">Equanimity</span><span class="word-example">"she received the news with an equanimity that cost her, as equanimity always does, considerably more than it appeared"</span></div>
+    <div class="word-entry"><span class="word-name">Weariness</span><span class="word-example">"the weariness was not of the body but of the kind that accumulates in those who have hoped too precisely"</span></div>
+    <div class="word-entry"><span class="word-name">Rapture</span><span class="word-example">"the rapture lasted only as long as the ignorance that had produced it"</span></div>
+    <div class="word-entry"><span class="word-name">Stupor</span><span class="word-example">"a stupor had descended upon the household, thick as the grief that had preceded it"</span></div>
+    <div class="word-entry"><span class="word-name">Indignation</span><span class="word-example">"her indignation was righteous but impractical, as indignation tends to be when directed at the irreversible"</span></div>
+    <div class="word-entry"><span class="word-name">Compunction</span><span class="word-example">"compunction, arriving late as it invariably did, found him already committed to the course it counselled against"</span></div>
+    <div class="word-entry"><span class="word-name">Elation</span><span class="word-example">"the elation was disproportionate to its cause, which told him more about his prior state than about the present one"</span></div>
+  </div>
+
+  <!-- THE PHYSICAL WORLD -->
+
+  <div class="family-card" id="physical-world">
+    <h2>The Physical World</h2>
+    <div class="word-entry"><span class="word-name">Contrivance</span><span class="word-example">"every contrivance of the age conspires against the stillness the mind requires to know itself"</span></div>
+    <div class="word-entry"><span class="word-name">Edifice</span><span class="word-example">"the edifice, already old when his grandfather had known it, seemed to regard him with a settled indifference"</span></div>
+    <div class="word-entry"><span class="word-name">Precipice</span><span class="word-example">"he stood at a precipice not of stone but of consequence, and found it no less vertiginous for that"</span></div>
+    <div class="word-entry"><span class="word-name">Vale</span><span class="word-example">"the vale lay below them, indifferent to the season and to the small figures moving across it"</span></div>
+    <div class="word-entry"><span class="word-name">Firmament</span><span class="word-example">"she had looked, on such evenings, to the firmament for the reassurance that the earth withheld"</span></div>
+    <div class="word-entry"><span class="word-name">Threshold</span><span class="word-example">"at the threshold, he paused — not from hesitation but from the recognition that entry was irreversible"</span></div>
+    <div class="word-entry"><span class="word-name">Vestibule</span><span class="word-example">"the vestibule retained the cold of the morning long after the rest of the house had surrendered it"</span></div>
+    <div class="word-entry"><span class="word-name">Expanse</span><span class="word-example">"the expanse before them offered the particular loneliness of space without destination"</span></div>
+    <div class="word-entry"><span class="word-name">Canopy</span><span class="word-example">"the canopy of branches above them filtered the light into something older than the afternoon it came from"</span></div>
+    <div class="word-entry"><span class="word-name">Rampart</span><span class="word-example">"the rampart had been built to keep something out; it had succeeded in keeping everything in"</span></div>
+    <div class="word-entry"><span class="word-name">Aperture</span><span class="word-example">"through the aperture, a single column of light fell upon the dust of the unoccupied room"</span></div>
+    <div class="word-entry"><span class="word-name">Sepulchre</span><span class="word-example">"the house had become, by degrees and without declaration, a sepulchre for the life once lived within it"</span></div>
+    <div class="word-entry"><span class="word-name">Corridor</span><span class="word-example">"the corridor stretched before her with the particular hostility of spaces designed for passage, not habitation"</span></div>
+    <div class="word-entry"><span class="word-name">Parapet</span><span class="word-example">"he leaned upon the parapet and regarded the city below with the detachment of one who had ceased to belong to it"</span></div>
+    <div class="word-entry"><span class="word-name">Hollow</span><span class="word-example">"the hollow in the hillside had collected the morning's silence and held it past noon"</span></div>
+    <div class="word-entry"><span class="word-name">Abyss</span><span class="word-example">"the abyss was not beneath him but within him, and far less navigable for that"</span></div>
+    <div class="word-entry"><span class="word-name">Terrain</span><span class="word-example">"the terrain of his grief was unmarked; he moved through it without the comfort of having been there before"</span></div>
+    <div class="word-entry"><span class="word-name">Nave</span><span class="word-example">"the nave absorbed their voices and returned them as something closer to supplication than speech"</span></div>
+    <div class="word-entry"><span class="word-name">Hearth</span><span class="word-example">"the hearth had been cold for a season, and the room had taken on the character of what it lacked"</span></div>
+    <div class="word-entry"><span class="word-name">Enclosure</span><span class="word-example">"the enclosure offered safety of the kind that cannot be distinguished, from the inside, from captivity"</span></div>
+  </div>
+
+  <!-- HUMAN CONDUCT -->
+
+  <div class="family-card" id="human-conduct">
+    <h2>Human Conduct</h2>
+    <div class="word-entry"><span class="word-name">Forbearance</span><span class="word-example">"the forbearance she had exercised for so long had been mistaken, by those who benefited from it, for approval"</span></div>
+    <div class="word-entry"><span class="word-name">Propriety</span><span class="word-example">"propriety demanded one thing; honesty demanded another; she chose, as she always had, the former"</span></div>
+    <div class="word-entry"><span class="word-name">Contrition</span><span class="word-example">"his contrition was visible and, for that reason, slightly suspect to those who knew him best"</span></div>
+    <div class="word-entry"><span class="word-name">Duplicity</span><span class="word-example">"the duplicity had been so long sustained that he had ceased to recognise it as such"</span></div>
+    <div class="word-entry"><span class="word-name">Rectitude</span><span class="word-example">"his rectitude, genuine enough in its origins, had hardened over years into something indistinguishable from severity"</span></div>
+    <div class="word-entry"><span class="word-name">Dissemblance</span><span class="word-example">"the dissemblance was accomplished with such ease that she began to doubt whether ease itself was not its own confession"</span></div>
+    <div class="word-entry"><span class="word-name">Reticence</span><span class="word-example">"his reticence on the matter was itself a form of testimony, and was understood as such"</span></div>
+    <div class="word-entry"><span class="word-name">Magnanimity</span><span class="word-example">"the magnanimity of his response cost him nothing, which perhaps explained why it was so readily extended"</span></div>
+    <div class="word-entry"><span class="word-name">Impertinence</span><span class="word-example">"the impertinence of the question was exceeded only by the accuracy of its aim"</span></div>
+    <div class="word-entry"><span class="word-name">Condescension</span><span class="word-example">"the condescension was so refined as to be almost indistinguishable from benevolence, which was precisely its intention"</span></div>
+    <div class="word-entry"><span class="word-name">Deference</span><span class="word-example">"the deference he showed was genuine, though it was directed at the position rather than the person who occupied it"</span></div>
+    <div class="word-entry"><span class="word-name">Candour</span><span class="word-example">"her candour, delivered without cruelty, was the more devastating for its absence of intent"</span></div>
+    <div class="word-entry"><span class="word-name">Insolence</span><span class="word-example">"the insolence was not in the words but in the composure with which they were delivered"</span></div>
+    <div class="word-entry"><span class="word-name">Circumspection</span><span class="word-example">"circumspection had served him well in every matter except the one in which it was most required"</span></div>
+    <div class="word-entry"><span class="word-name">Caprice</span><span class="word-example">"what appeared to be caprice was, on closer examination, a system too personal to be legible to others"</span></div>
+    <div class="word-entry"><span class="word-name">Obstinacy</span><span class="word-example">"the obstinacy he displayed was the obstinacy of the man who has been right too often to consider the alternative"</span></div>
+    <div class="word-entry"><span class="word-name">Intransigence</span><span class="word-example">"her intransigence on this point was the single quality that those who admired her could not admire"</span></div>
+    <div class="word-entry"><span class="word-name">Presumption</span><span class="word-example">"the presumption of the request was so remarkable that it silenced, for a moment, even its intended recipient"</span></div>
+    <div class="word-entry"><span class="word-name">Acquiescence</span><span class="word-example">"the acquiescence was swift and therefore alarming to those who had expected resistance"</span></div>
+    <div class="word-entry"><span class="word-name">Decorum</span><span class="word-example">"decorum was preserved throughout, which is to say that nothing of any consequence was permitted to be said"</span></div>
+    <div class="word-entry"><span class="word-name">Perfidy</span><span class="word-example">"the perfidy was not of the spectacular kind; it was the slow, domestic variety that leaves no single moment to point at"</span></div>
+    <div class="word-entry"><span class="word-name">Probity</span><span class="word-example">"his probity in financial matters was beyond question, which made the other matters all the more confounding"</span></div>
+    <div class="word-entry"><span class="word-name">Cupidity</span><span class="word-example">"the cupidity that drove him was dressed, as cupidity invariably is, in the language of necessity"</span></div>
+    <div class="word-entry"><span class="word-name">Dissipation</span><span class="word-example">"the dissipation had been gradual enough that no single evening could be identified as its beginning"</span></div>
+    <div class="word-entry"><span class="word-name">Indiscretion</span><span class="word-example">"the indiscretion was small but had the particular quality of small indiscretions, which is that they are remembered longest"</span></div>
+  </div>
+
+  <!-- TIME AND PASSAGE -->
+
+  <div class="family-card" id="time-and-passage">
+    <h2>Time and Passage</h2>
+    <div class="word-entry"><span class="word-name">Hitherto</span><span class="word-example">"what was hitherto unspoken had accumulated in the room until the air itself felt weighted with it"</span></div>
+    <div class="word-entry"><span class="word-name">Henceforth</span><span class="word-example">"henceforth, she resolved, the door of that particular consideration would remain closed to her"</span></div>
+    <div class="word-entry"><span class="word-name">Erstwhile</span><span class="word-example">"the erstwhile companion, now a stranger in all but name, passed without acknowledgement"</span></div>
+    <div class="word-entry"><span class="word-name">Interminable</span><span class="word-example">"the interminable afternoon had the quality of time that refuses to be consumed by the activities arranged to consume it"</span></div>
+    <div class="word-entry"><span class="word-name">Transient</span><span class="word-example">"the happiness was transient in the manner of all happinesses that are recognised as such while they persist"</span></div>
+    <div class="word-entry"><span class="word-name">Perpetual</span><span class="word-example">"the perpetual noise of the age had made silence not merely rare but, to certain constitutions, unbearable"</span></div>
+    <div class="word-entry"><span class="word-name">Antecedent</span><span class="word-example">"the antecedent to the present misery was not a single event but a sequence so gradual as to be almost invisible"</span></div>
+    <div class="word-entry"><span class="word-name">Contemporaneous</span><span class="word-example">"the two events, though contemporaneous, were connected by something more deliberate than coincidence"</span></div>
+    <div class="word-entry"><span class="word-name">Intervening</span><span class="word-example">"the intervening years had softened the memory without altering its essential character"</span></div>
+    <div class="word-entry"><span class="word-name">Posterity</span><span class="word-example">"he wrote with an awareness of posterity that those who read him in his lifetime found faintly presumptuous"</span></div>
+    <div class="word-entry"><span class="word-name">Epoch</span><span class="word-example">"the epoch demanded a kind of certainty that the most honest among them found themselves unable to supply"</span></div>
+    <div class="word-entry"><span class="word-name">Vestige</span><span class="word-example">"the vestige of her former confidence remained in her posture long after it had abandoned her expression"</span></div>
+    <div class="word-entry"><span class="word-name">Remnant</span><span class="word-example">"the remnant of his dignity, small but intact, was the only thing he left the room with"</span></div>
+    <div class="word-entry"><span class="word-name">Precipitate</span><span class="word-example">"the precipitate departure had left the household in a confusion it took several days to resolve"</span></div>
+    <div class="word-entry"><span class="word-name">Immemorial</span><span class="word-example">"the custom was of immemorial origin, which is to say that no one living could recall either its beginning or its purpose"</span></div>
+    <div class="word-entry"><span class="word-name">Evanescent</span><span class="word-example">"the evanescent quality of the light at that hour made the garden appear to belong to a different season"</span></div>
+    <div class="word-entry"><span class="word-name">Inexorable</span><span class="word-example">"the inexorable passage of the matter toward its conclusion could be observed but not interrupted"</span></div>
+    <div class="word-entry"><span class="word-name">Protracted</span><span class="word-example">"the protracted nature of the farewell exceeded the emotional resources of those required to sustain it"</span></div>
+    <div class="word-entry"><span class="word-name">Lingering</span><span class="word-example">"a lingering sense of what had been said, or left unsaid, accompanied her through the remainder of the evening"</span></div>
+    <div class="word-entry"><span class="word-name">Imminent</span><span class="word-example">"the imminent conclusion of the affair cast a peculiar light over everything that preceded it"</span></div>
+  </div>
+
+  <!-- JUDGMENT AND REASON -->
+
+  <div class="family-card" id="judgment-and-reason">
+    <h2>Judgment and Reason</h2>
+    <div class="word-entry"><span class="word-name">Discernment</span><span class="word-example">"the discernment she brought to matters of character was not always extended to matters of her own"</span></div>
+    <div class="word-entry"><span class="word-name">Conjecture</span><span class="word-example">"the conjecture, offered with the confidence of established fact, was received as such by those predisposed to believe it"</span></div>
+    <div class="word-entry"><span class="word-name">Fallacy</span><span class="word-example">"the fallacy at the centre of the argument had been visible from the outset to all who had no investment in its conclusion"</span></div>
+    <div class="word-entry"><span class="word-name">Prudence</span><span class="word-example">"prudence counselled silence; something older and less advisable counselled otherwise"</span></div>
+    <div class="word-entry"><span class="word-name">Veracity</span><span class="word-example">"the veracity of the account was not in question; it was its completeness that gave cause for reservation"</span></div>
+    <div class="word-entry"><span class="word-name">Perspicacity</span><span class="word-example">"the perspicacity she brought to others' difficulties abandoned her entirely when applied to her own"</span></div>
+    <div class="word-entry"><span class="word-name">Acuity</span><span class="word-example">"the acuity of his observation was in inverse proportion to his willingness to act upon what it revealed"</span></div>
+    <div class="word-entry"><span class="word-name">Sophistry</span><span class="word-example">"the sophistry was elegant and, to those who found elegant reasoning more persuasive than sound reasoning, entirely convincing"</span></div>
+    <div class="word-entry"><span class="word-name">Inference</span><span class="word-example">"the inference was reasonable but had the misfortune of being incorrect, which no degree of reasonableness can entirely excuse"</span></div>
+    <div class="word-entry"><span class="word-name">Deliberation</span><span class="word-example">"the deliberation was lengthy, which those who awaited its conclusion took as a sign of care rather than uncertainty"</span></div>
+    <div class="word-entry"><span class="word-name">Ratiocination</span><span class="word-example">"the ratiocination that had served him in every lesser matter failed him now at the point of greatest consequence"</span></div>
+    <div class="word-entry"><span class="word-name">Apprehension</span><span class="word-example">"his apprehension of the difficulty was complete; his willingness to address it was another matter entirely"</span></div>
+    <div class="word-entry"><span class="word-name">Postulation</span><span class="word-example">"the postulation was offered tentatively, in the manner of those who have already decided but wish to appear undecided"</span></div>
+    <div class="word-entry"><span class="word-name">Sagacity</span><span class="word-example">"the sagacity attributed to him was largely the product of a reputation formed before the evidence was available"</span></div>
+    <div class="word-entry"><span class="word-name">Lucidity</span><span class="word-example">"the lucidity of her argument was undeniable and therefore, to those who opposed it, deeply inconvenient"</span></div>
+    <div class="word-entry"><span class="word-name">Equivocation</span><span class="word-example">"the equivocation was so accomplished that it satisfied, temporarily, both sides of the question it declined to answer"</span></div>
+    <div class="word-entry"><span class="word-name">Cogitation</span><span class="word-example">"the cogitation lasted through the night and produced, by morning, a conclusion he had held since the previous afternoon"</span></div>
+    <div class="word-entry"><span class="word-name">Abstraction</span><span class="word-example">"the abstraction into which he retreated during moments of difficulty had become, over time, his primary residence"</span></div>
+    <div class="word-entry"><span class="word-name">Precept</span><span class="word-example">"the precept had been followed so long it had acquired the authority of instinct rather than instruction"</span></div>
+    <div class="word-entry"><span class="word-name">Erudition</span><span class="word-example">"his erudition was genuine and extensive and served, on certain occasions, as a substitute for understanding"</span></div>
+  </div>
+
+  <!-- LOSS AND ABSENCE -->
+
+  <div class="family-card" id="loss-and-absence">
+    <h2>Loss and Absence</h2>
+    <div class="word-entry"><span class="word-name">Bereft</span><span class="word-example">"she was bereft not of him but of the version of herself that had existed in relation to him"</span></div>
+    <div class="word-entry"><span class="word-name">Languish</span><span class="word-example">"the correspondence had been allowed to languish, and with it the understanding that had depended upon it"</span></div>
+    <div class="word-entry"><span class="word-name">Privation</span><span class="word-example">"the privation was material but its effects were felt most acutely in the curtailment of what had previously been taken for granted"</span></div>
+    <div class="word-entry"><span class="word-name">Lament</span><span class="word-example">"the lament, private and sustained, had been conducted without witnesses, which made it no less thorough"</span></div>
+    <div class="word-entry"><span class="word-name">Deprivation</span><span class="word-example">"the deprivation of company had sharpened her, in some respects, and diminished her in others"</span></div>
+    <div class="word-entry"><span class="word-name">Bereavement</span><span class="word-example">"the bereavement had altered his relationship to time in ways he could not have predicted and could not reverse"</span></div>
+    <div class="word-entry"><span class="word-name">Destitution</span><span class="word-example">"the destitution was of the spirit rather than the purse, which made it both harder to name and harder to remedy"</span></div>
+    <div class="word-entry"><span class="word-name">Forfeit</span><span class="word-example">"what had been forfeited in the transaction was not immediately apparent, and was not apparent at all until it was too late"</span></div>
+    <div class="word-entry"><span class="word-name">Void</span><span class="word-example">"the void left by the departure was disproportionate to what, examined plainly, the presence had actually provided"</span></div>
+    <div class="word-entry"><span class="word-name">Severance</span><span class="word-example">"the severance was clean, which is to say it was performed with precision and felt like violence"</span></div>
+    <div class="word-entry"><span class="word-name">Diminishment</span><span class="word-example">"the diminishment of his expectations had been so gradual that he had not noticed it until the expectations were gone entirely"</span></div>
+    <div class="word-entry"><span class="word-name">Abandonment</span><span class="word-example">"the abandonment was not dramatic; it was the slow withdrawal of attention, which is the more thorough kind"</span></div>
+    <div class="word-entry"><span class="word-name">Estrangement</span><span class="word-example">"the estrangement had occurred without a declared occasion, which made it impossible to appeal"</span></div>
+    <div class="word-entry"><span class="word-name">Dissolution</span><span class="word-example">"the dissolution of the arrangement had been so long anticipated that its arrival produced, in most, only relief"</span></div>
+    <div class="word-entry"><span class="word-name">Impoverishment</span><span class="word-example">"the impoverishment of the imagination was the consequence, she believed, of having been too long comfortable"</span></div>
+  </div>
+
+  <!-- POWER AND AUTHORITY -->
+
+  <div class="family-card" id="power-and-authority">
+    <h2>Power and Authority</h2>
+    <div class="word-entry"><span class="word-name">Dominion</span><span class="word-example">"the dominion he exercised over the household was absolute and, for that reason, rarely required to be exercised at all"</span></div>
+    <div class="word-entry"><span class="word-name">Jurisdiction</span><span class="word-example">"the courtroom, filled of paperwork from centuries ago, a verdict on its run, delivered by none other than the Jurisdiction"</span></div>
+    <div class="word-entry"><span class="word-name">Sovereignty</span><span class="word-example">"the sovereignty of her own judgment was the only sovereignty she had never been persuaded to surrender"</span></div>
+    <div class="word-entry"><span class="word-name">Incumbency</span><span class="word-example">"the incumbency of the position carried obligations that its previous occupant had found convenient to overlook"</span></div>
+    <div class="word-entry"><span class="word-name">Prerogative</span><span class="word-example">"she exercised the prerogative of silence with the same authority others brought to speech"</span></div>
+    <div class="word-entry"><span class="word-name">Subjugation</span><span class="word-example">"the subjugation was so long established that the subjugated had ceased to experience it as such"</span></div>
+    <div class="word-entry"><span class="word-name">Ascendancy</span><span class="word-example">"the ascendancy of one faction over another had been so gradual that no single moment of defeat could be identified"</span></div>
+    <div class="word-entry"><span class="word-name">Edict</span><span class="word-example">"the edict was delivered without ceremony, which communicated, more effectively than ceremony could have, its finality"</span></div>
+    <div class="word-entry"><span class="word-name">Imperious</span><span class="word-example">"the imperious manner in which the instruction was delivered ensured that its content was almost entirely overlooked"</span></div>
+    <div class="word-entry"><span class="word-name">Hegemony</span><span class="word-example">"the hegemony had been maintained not by force but by the more durable instrument of assumed consent"</span></div>
+    <div class="word-entry"><span class="word-name">Mandate</span><span class="word-example">"the mandate was broad enough to accommodate whatever he had already decided to do within it"</span></div>
+    <div class="word-entry"><span class="word-name">Ordinance</span><span class="word-example">"the ordinance had been observed for so long that its origin had passed beyond the reach of institutional memory"</span></div>
+    <div class="word-entry"><span class="word-name">Suzerainty</span><span class="word-example">"the suzerainty exercised over the province was nominal in law and absolute in practice"</span></div>
+    <div class="word-entry"><span class="word-name">Usurpation</span><span class="word-example">"the usurpation was accomplished so quietly that those displaced were uncertain, for some time, whether it had occurred"</span></div>
+    <div class="word-entry"><span class="word-name">Tyranny</span><span class="word-example">"the tyranny was of the benevolent variety, which is the most complete because it permits no legitimate grievance"</span></div>
+    <div class="word-entry"><span class="word-name">Capitulation</span><span class="word-example">"the capitulation was dressed as compromise, which satisfied the dignity of all parties without altering the outcome"</span></div>
+    <div class="word-entry"><span class="word-name">Censure</span><span class="word-example">"the censure was public and therefore served a purpose beyond the correction of the censured"</span></div>
+    <div class="word-entry"><span class="word-name">Dispensation</span><span class="word-example">"the dispensation was granted with the reluctance of those who grant it only when refusal has become impossible"</span></div>
+  </div>
+
+  <!-- NATURE AND ELEMENTS -->
+
+  <div class="family-card" id="nature-and-elements">
+    <h2>Nature and Elements</h2>
+    <div class="word-entry"><span class="word-name">Tempest</span><span class="word-example">"the tempest had passed by morning, leaving a stillness that felt less like calm than like held breath"</span></div>
+    <div class="word-entry"><span class="word-name">Vapour</span><span class="word-example">"the vapour rising from the valley obscured the lower reaches of the hill and gave the upper portions the appearance of suspension"</span></div>
+    <div class="word-entry"><span class="word-name">Verdure</span><span class="word-example">"the verdure of the hillside in that season was a reproach to the interior life she had been conducting"</span></div>
+    <div class="word-entry"><span class="word-name">Obscurity</span><span class="word-example">"the obscurity into which the figure retreated was not the obscurity of darkness but of distance"</span></div>
+    <div class="word-entry"><span class="word-name">Luminescence</span><span class="word-example">"the luminescence of the water at that hour suggested an internal source rather than a borrowed one"</span></div>
+    <div class="word-entry"><span class="word-name">Canticle</span><span class="word-example">"the canticle of the wind through the upper branches was the only sound the forest consented to produce"</span></div>
+    <div class="word-entry"><span class="word-name">Torrent</span><span class="word-example">"the torrent carried with it everything that had been too loosely held to the bank"</span></div>
+    <div class="word-entry"><span class="word-name">Penumbra</span><span class="word-example">"she stood at the penumbra of the lamplight, neither fully illuminated nor fully absent from the scene"</span></div>
+    <div class="word-entry"><span class="word-name">Canopy</span><span class="word-example">"the canopy of cloud had settled so low that the hills appeared to have grown since morning"</span></div>
+    <div class="word-entry"><span class="word-name">Sublime</span><span class="word-example">"the sublime indifference of the landscape to the small event occurring within it was, in its way, a comfort"</span></div>
+    <div class="word-entry"><span class="word-name">Ethereal</span><span class="word-example">"the ethereal quality of the light in that hour made the familiar landscape appear to belong to an account of itself"</span></div>
+    <div class="word-entry"><span class="word-name">Resplendent</span><span class="word-example">"the resplendent indifference of the morning to the night that had preceded it struck her as a form of cruelty"</span></div>
+    <div class="word-entry"><span class="word-name">Crepuscular</span><span class="word-example">"the crepuscular hour had always suited him, being neither the demand of day nor the abandonment of night"</span></div>
+    <div class="word-entry"><span class="word-name">Elemental</span><span class="word-example">"the grief had become elemental in the way that long griefs do — part of the weather of the person"</span></div>
+    <div class="word-entry"><span class="word-name">Meridian</span><span class="word-example">"at the meridian of the day, when shadow and light reached their most precise agreement, she made her decision"</span></div>
+  </div>
+
+  <!-- SPEECH AND EXPRESSION -->
+
+  <div class="family-card" id="speech-and-expression">
+    <h2>Speech and Expression</h2>
+    <div class="word-entry"><span class="word-name">Utterance</span><span class="word-example">"the utterance, once made, could not be recalled; it remained in the room long after the conversation had ended"</span></div>
+    <div class="word-entry"><span class="word-name">Proclamation</span><span class="word-example">"the proclamation was made with the conviction of one who had been rehearsing it privately for some considerable time"</span></div>
+    <div class="word-entry"><span class="word-name">Invective</span><span class="word-example">"the invective was delivered calmly, which made it considerably more effective than passion would have allowed"</span></div>
+    <div class="word-entry"><span class="word-name">Remonstrance</span><span class="word-example">"the remonstrance was heard, acknowledged with apparent attention, and entirely disregarded"</span></div>
+    <div class="word-entry"><span class="word-name">Imprecation</span><span class="word-example">"the imprecation was whispered rather than spoken, as though volume might make it more difficult to retract"</span></div>
+    <div class="word-entry"><span class="word-name">Soliloquy</span><span class="word-example">"the soliloquy, nominally addressed to the company, was in truth addressed to a single pair of ears within it"</span></div>
+    <div class="word-entry"><span class="word-name">Elegy</span><span class="word-example">"what had begun as a letter of explanation had become, by its third page, an elegy"</span></div>
+    <div class="word-entry"><span class="word-name">Exposition</span><span class="word-example">"the exposition was thorough and, in its thoroughness, revealed more than the speaker had intended"</span></div>
+    <div class="word-entry"><span class="word-name">Effusion</span><span class="word-example">"the effusion of feeling, genuine as it was, made those present uncertain how to arrange their own expressions"</span></div>
+    <div class="word-entry"><span class="word-name">Cadence</span><span class="word-example">"the cadence of her speech had the quality of thought arriving in real time rather than being delivered from preparation"</span></div>
+    <div class="word-entry"><span class="word-name">Discourse</span><span class="word-example">"the discourse had been elevated in its subject and disappointing in its conclusions, as elevated discourse often is"</span></div>
+    <div class="word-entry"><span class="word-name">Pronouncement</span><span class="word-example">"the pronouncement was final in its form and provisional, as all pronouncements are, in its effect"</span></div>
+    <div class="word-entry"><span class="word-name">Admonition</span><span class="word-example">"the admonition was delivered with sufficient gentleness to be ignored and sufficient precision to be remembered"</span></div>
+    <div class="word-entry"><span class="word-name">Supplication</span><span class="word-example">"the supplication was framed as a request but possessed the gravity of something closer to necessity"</span></div>
+    <div class="word-entry"><span class="word-name">Dissertation</span><span class="word-example">"what had been requested as an opinion arrived as a dissertation, which was not entirely unexpected"</span></div>
+  </div>
+
+  <!-- OBLIGATION AND DUTY -->
+
+  <div class="family-card" id="obligation-and-duty">
+    <h2>Obligation and Duty</h2>
+    <div class="word-entry"><span class="word-name">Incumbency</span><span class="word-example">"the incumbency of care fell to her by default, as it tends to fall to those who do not decline it quickly enough"</span></div>
+    <div class="word-entry"><span class="word-name">Compulsion</span><span class="word-example">"the compulsion he felt was not legal but moral, which made it, in certain respects, harder to resist"</span></div>
+    <div class="word-entry"><span class="word-name">Exigency</span><span class="word-example">"the exigency of the situation demanded action of the kind he had always preferred to defer"</span></div>
+    <div class="word-entry"><span class="word-name">Imperative</span><span class="word-example">"the imperative was clear; the capacity to meet it was the matter in question"</span></div>
+    <div class="word-entry"><span class="word-name">Onus</span><span class="word-example">"the onus had been transferred with such dexterity that the recipient had not noticed its arrival"</span></div>
+    <div class="word-entry"><span class="word-name">Fealty</span><span class="word-example">"the fealty he owed was to the principle rather than the person, a distinction that had cost him the person"</span></div>
+    <div class="word-entry"><span class="word-name">Injunction</span><span class="word-example">"the injunction was observed in its letter and systematically violated in its spirit"</span></div>
+    <div class="word-entry"><span class="word-name">Remit</span><span class="word-example">"the remit of her concern extended further than its authority, which is the common condition of those who care deeply"</span></div>
+    <div class="word-entry"><span class="word-name">Obligation</span><span class="word-example">"the obligation was of the kind that cannot be discharged but only carried, with varying degrees of grace"</span></div>
+    <div class="word-entry"><span class="word-name">Conscription</span><span class="word-example">"the conscription of her sympathy had been accomplished so gradually that she had not noticed it until it was complete"</span></div>
+    <div class="word-entry"><span class="word-name">Stipulation</span><span class="word-example">"the stipulation was attached to the offer with such apparent casualness that its significance was initially overlooked"</span></div>
+    <div class="word-entry"><span class="word-name">Proscription</span><span class="word-example">"the proscription covered precisely those activities that had made the arrangement worth entering into"</span></div>
+  </div>
+
+  <!-- DESIRE AND LONGING -->
+
+  <div class="family-card" id="desire-and-longing">
+    <h2>Desire and Longing</h2>
+    <div class="word-entry"><span class="word-name">Yearning</span><span class="word-example">"the yearning was not for the thing itself but for the version of herself that had existed when the thing was possible"</span></div>
+    <div class="word-entry"><span class="word-name">Ardour</span><span class="word-example">"the ardour of his early intention had cooled into something more durable but considerably less useful"</span></div>
+    <div class="word-entry"><span class="word-name">Coveting</span><span class="word-example">"what had begun as admiration had, without her noticing the transition, become coveting"</span></div>
+    <div class="word-entry"><span class="word-name">Longing</span><span class="word-example">"the longing was retrospective, which made it both more precise and entirely without remedy"</span></div>
+    <div class="word-entry"><span class="word-name">Aspiration</span><span class="word-example">"the aspiration had been noble in its origin and had become, through the passage of time, merely habitual"</span></div>
+    <div class="word-entry"><span class="word-name">Appetite</span><span class="word-example">"the appetite for certainty, unmet for so long, had begun to accept probability as a reasonable substitute"</span></div>
+    <div class="word-entry"><span class="word-name">Predilection</span><span class="word-example">"her predilection for the melancholy in music was not, as some supposed, a pose; it was a preference formed before she had language for it"</span></div>
+    <div class="word-entry"><span class="word-name">Inclination</span><span class="word-example">"the inclination toward solitude had been present in him since childhood and had only strengthened with the provision of its alternatives"</span></div>
+    <div class="word-entry"><span class="word-name">Pining</span><span class="word-example">"the pining was conducted without exhibition, which is the only variety that lasts"</span></div>
+    <div class="word-entry"><span class="word-name">Craving</span><span class="word-example">"the craving for resolution had made him susceptible to any conclusion, however unsatisfactory, that presented itself as one"</span></div>
+  </div>
+
+  <!-- CONFLICT AND OPPOSITION -->
+
+  <div class="family-card" id="conflict-and-opposition">
+    <h2>Conflict and Opposition</h2>
+    <div class="word-entry"><span class="word-name">Antagonism</span><span class="word-example">"the antagonism between them had reached the stage at which courtesy itself became a form of hostility"</span></div>
+    <div class="word-entry"><span class="word-name">Contention</span><span class="word-example">"the contention was not about the matter stated but about a matter neither party was prepared to state"</span></div>
+    <div class="word-entry"><span class="word-name">Dissension</span><span class="word-example">"the dissension within the house was conducted at a volume invisible to those outside it"</span></div>
+    <div class="word-entry"><span class="word-name">Enmity</span><span class="word-example">"the enmity was old enough to have lost its original cause, which made it, if anything, more intractable"</span></div>
+    <div class="word-entry"><span class="word-name">Acrimony</span><span class="word-example">"the acrimony of the exchange was in inverse proportion to the significance of its apparent subject"</span></div>
+    <div class="word-entry"><span class="word-name">Rupture</span><span class="word-example">"the rupture, when it came, was the culmination of a thousand small concessions that had never quite been enough"</span></div>
+    <div class="word-entry"><span class="word-name">Irreconcilable</span><span class="word-example">"the positions had become irreconcilable not because of their distance but because of the investment made in maintaining it"</span></div>
+    <div class="word-entry"><span class="word-name">Belligerence</span><span class="word-example">"the belligerence was performed rather than felt, which made it no less effective as an instrument of intimidation"</span></div>
+    <div class="word-entry"><span class="word-name">Provocation</span><span class="word-example">"the provocation was subtle enough to be deniable and precise enough to be unmistakable"</span></div>
+    <div class="word-entry"><span class="word-name">Adversity</span><span class="word-example">"the adversity had produced in some a fortitude they had not previously known they possessed"</span></div>
+    <div class="word-entry"><span class="word-name">Subjection</span><span class="word-example">"the subjection was voluntary and therefore complete in a way that compulsion could not have achieved"</span></div>
+    <div class="word-entry"><span class="word-name">Tumult</span><span class="word-example">"the tumult within him produced, on the surface, a stillness that those who knew him least found reassuring"</span></div>
+  </div>
+
+  <!-- KNOWLEDGE AND IGNORANCE -->
+
+  <div class="family-card" id="knowledge-and-ignorance">
+    <h2>Knowledge and Ignorance</h2>
+    <div class="word-entry"><span class="word-name">Comprehension</span><span class="word-example">"the comprehension arrived slowly and then completely, as comprehension does when the mind has been resisting it"</span></div>
+    <div class="word-entry"><span class="word-name">Erudition</span><span class="word-example">"the erudition was displayed with the casualness of those who have never needed to consider whether it is welcome"</span></div>
+    <div class="word-entry"><span class="word-name">Oblivion</span><span class="word-example">"the oblivion she had sought was not unconsciousness but the suspension of the particular knowledge that troubled her"</span></div>
+    <div class="word-entry"><span class="word-name">Revelation</span><span class="word-example">"the revelation was less surprising than the realisation that she had, in some sense, always known it"</span></div>
+    <div class="word-entry"><span class="word-name">Ignorance</span><span class="word-example">"the ignorance was not of the innocent variety; it had been cultivated with some effort over a considerable period"</span></div>
+    <div class="word-entry"><span class="word-name">Illumination</span><span class="word-example">"the illumination the conversation provided was of the uncomfortable kind that cannot, once received, be returned"</span></div>
+    <div class="word-entry"><span class="word-name">Inscription</span><span class="word-example">"the inscription on the stone was worn to illegibility, which seemed appropriate given what it had been placed there to say"</span></div>
+    <div class="word-entry"><span class="word-name">Precognition</span><span class="word-example">"the precognition she claimed was, on examination, the ordinary perception of one who pays closer attention than those around her"</span></div>
+    <div class="word-entry"><span class="word-name">Conjecture</span><span class="word-example">"the conjecture had hardened, through repetition, into something that resembled certainty in all but origin"</span></div>
+    <div class="word-entry"><span class="word-name">Hypothesis</span><span class="word-example">"the hypothesis was presented as a question but carried within it the full weight of a conclusion already reached"</span></div>
+    <div class="word-entry"><span class="word-name">Profundity</span><span class="word-example">"the profundity of the silence that followed was the profundity of something that had been waiting a long time to be understood"</span></div>
+  </div>
+
+  <!-- BEAUTY AND RUIN -->
+
+  <div class="family-card" id="beauty-and-ruin">
+    <h2>Beauty and Ruin</h2>
+    <div class="word-entry"><span class="word-name">Resplendence</span><span class="word-example">"the resplendence of the occasion was in direct proportion to its brevity, which is the common arrangement"</span></div>
+    <div class="word-entry"><span class="word-name">Grandeur</span><span class="word-example">"the grandeur of the conception had not survived its execution, which is the common fate of grandeur"</span></div>
+    <div class="word-entry"><span class="word-name">Elegance</span><span class="word-example">"the elegance of the solution concealed, as elegance is designed to do, the considerable effort behind it"</span></div>
+    <div class="word-entry"><span class="word-name">Devastation</span><span class="word-example">"the devastation was orderly, which made it, in certain respects, more complete than chaos would have been"</span></div>
+    <div class="word-entry"><span class="word-name">Dissolution</span><span class="word-example">"the dissolution of what had once seemed permanent produced a revision of everything that had depended upon its permanence"</span></div>
+    <div class="word-entry"><span class="word-name">Desolation</span><span class="word-example">"the desolation of the place was of the kind that suggests recent habitation rather than long absence"</span></div>
+    <div class="word-entry"><span class="word-name">Splendour</span><span class="word-example">"the splendour of the ruin exceeded, in his estimation, the splendour of whatever it had been before it became one"</span></div>
+    <div class="word-entry"><span class="word-name">Magnificence</span><span class="word-example">"the magnificence was real but had been arranged with a precision that made it feel, on reflection, like an argument"</span></div>
+    <div class="word-entry"><span class="word-name">Decrepitude</span><span class="word-example">"the decrepitude of the structure was such that it seemed to be held upright by the memory of what it had once been"</span></div>
+    <div class="word-entry"><span class="word-name">Luminosity</span><span class="word-example">"the luminosity of her account of the event was inversely proportional to its accuracy"</span></div>
+    <div class="word-entry"><span class="word-name">Radiance</span><span class="word-example">"the radiance of the occasion, genuine as it was, did not survive the morning that followed it"</span></div>
+    <div class="word-entry"><span class="word-name">Wreckage</span><span class="word-example">"the wreckage of the enterprise was examined by all parties with the thoroughness of those seeking to assign responsibility elsewhere"</span></div>
+  </div>
+
+  <!-- FAITH AND DOUBT -->
+
+  <div class="family-card" id="faith-and-doubt">
+    <h2>Faith and Doubt</h2>
+    <div class="word-entry"><span class="word-name">Conviction</span><span class="word-example">"the conviction with which he held the position was not evidence of its correctness, though it was frequently taken as such"</span></div>
+    <div class="word-entry"><span class="word-name">Scepticism</span><span class="word-example">"the scepticism she brought to the account was not hostility but the residue of previous occasions on which she had been too credulous"</span></div>
+    <div class="word-entry"><span class="word-name">Apostasy</span><span class="word-example">"the apostasy was gradual and was not recognised as such until it was complete"</span></div>
+    <div class="word-entry"><span class="word-name">Fervour</span><span class="word-example">"the fervour of the early years had not diminished so much as redirected itself toward more manageable objects"</span></div>
+    <div class="word-entry"><span class="word-name">Piety</span><span class="word-example">"the piety was sincere in its origins and had become, through long practice, indistinguishable from habit"</span></div>
+    <div class="word-entry"><span class="word-name">Heresy</span><span class="word-example">"the heresy, uttered once in a moment of honesty, was never repeated but was never forgotten by those who had heard it"</span></div>
+    <div class="word-entry"><span class="word-name">Devotion</span><span class="word-example">"the devotion had survived every reasonable test, which suggested it was sustained by something other than reason"</span></div>
+    <div class="word-entry"><span class="word-name">Incredulity</span><span class="word-example">"the incredulity with which the news was received was the incredulity of those who had, on some level, expected it"</span></div>
+    <div class="word-entry"><span class="word-name">Veneration</span><span class="word-example">"the veneration in which he was held survived the revelation of his flaws, which said something about the depth of the investment"</span></div>
+    <div class="word-entry"><span class="word-name">Perdition</span><span class="word-example">"the road to perdition had been paved, in his case, not with good intentions but with careful ones"</span></div>
+    <div class="word-entry"><span class="word-name">Absolution</span><span class="word-example">"the absolution he sought was not available from any of the sources to which he applied for it"</span></div>
+    <div class="word-entry"><span class="word-name">Consecration</span><span class="word-example">"the consecration of the space was performed without ceremony, which was the most sincere form available"</span></div>
+  </div>
+
+</main>
+
+<footer>&copy; 2026 H-Baidwan. All Rights Reserved. &nbsp;·&nbsp; Appendix VIC &nbsp;·&nbsp; The Codex's Spectrum</footer>
+
+<script>
+window.addEventListener("scroll", function() {
+  const header = document.getElementById("pageHeader");
+  if (window.scrollY > 50) header.classList.add("shrink");
+  else header.classList.remove("shrink");
+});
+</script>
+
+</body>
+</html>
