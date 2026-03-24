@@ -33,7 +33,13 @@ main { max-width: 900px; margin: 0 auto; padding: 20px 20px; }
 }
 .intro-card h1 { font-size: 2em; font-weight: 700; color: #0f2027; margin-bottom: 8px; }
 .intro-card .doc-meta { font-size: 0.82em; color: #888; margin-bottom: 12px; }
-.intro-card p { font-size: 0.95em; color: #444; line-height: 1.7; }
+.intro-card p { font-size: 0.95em; color: #444; line-height: 1.7; margin-bottom: 10px; }
+.intro-card p:last-child { margin-bottom: 0; }
+.meta-notation {
+  font-size: 0.88em; color: #555; background: #f9f9f9;
+  border-left: 3px solid #4CAF50; padding: 10px 14px;
+  border-radius: 4px; margin-top: 14px;
+}
 .nav-card {
   background: #fff; padding: 28px 35px; margin: 20px 0;
   border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);
@@ -73,6 +79,7 @@ main { max-width: 900px; margin: 0 auto; padding: 20px 20px; }
 .structure-point h4 { font-size: 0.95em; font-weight: 700; color: #0f2027; margin-bottom: 4px; }
 .structure-point p { font-size: 0.93em; color: #333; margin-bottom: 6px; }
 .structure-point .example { font-style: italic; color: #555; padding-left: 16px; border-left: 2px solid #e6ebf2; margin-top: 6px; font-size: 0.92em; }
+.metaphor-tag { font-size: 0.78em; color: #4CAF50; font-weight: 700; font-style: normal; margin-left: 3px; vertical-align: super; }
 .semicolonial-uses { margin-top: 12px; }
 .semicolonial-use { margin-top: 14px; padding-left: 16px; border-left: 2px solid #e6ebf2; }
 .semicolonial-use h5 { font-size: 0.88em; font-weight: 700; color: #2c5364; margin-bottom: 3px; }
@@ -88,7 +95,8 @@ main { max-width: 900px; margin: 0 auto; padding: 20px 20px; }
   margin-top: 6px; font-style: italic;
 }
 .definitions-section { margin-top: 28px; padding-top: 22px; border-top: 2px solid #e6ebf2; }
-.definition-entry { margin-top: 18px; }
+.definition-entry { margin-top: 18px; padding-top: 16px; border-top: 1px solid #f0f0f0; }
+.definition-entry:first-child { border-top: none; padding-top: 0; }
 .definition-entry h4 { font-size: 0.95em; font-weight: 700; color: #0f2027; margin-bottom: 6px; }
 .definition-entry p { font-size: 0.93em; color: #333; margin-bottom: 8px; }
 .definition-entry blockquote {
@@ -98,6 +106,11 @@ main { max-width: 900px; margin: 0 auto; padding: 20px 20px; }
 }
 .definition-entry a { color: #2c5364; font-weight: 600; text-decoration: none; border-bottom: 1px solid #2c5364; }
 .definition-entry a:hover { color: #4CAF50; border-bottom-color: #4CAF50; }
+.referenced-terms { margin-top: 18px; padding-top: 16px; border-top: 1px solid #f0f0f0; }
+.referenced-terms h4 { font-size: 0.95em; font-weight: 700; color: #0f2027; margin-bottom: 10px; }
+.referenced-term { margin-top: 10px; }
+.referenced-term strong { font-size: 0.93em; color: #203a43; }
+.referenced-term p { font-size: 0.91em; color: #444; margin-top: 2px; }
 p { margin: 6px 0 10px; font-size: 0.95em; color: #333; }
 .card.placeholder-card { opacity: 0.5; pointer-events: none; }
 .card.placeholder-card h2 { color: #999; }
@@ -121,6 +134,7 @@ footer { text-align: center; font-size: 0.8em; color: #888; margin: 40px 0 20px;
     <h1>The Codex</h1>
     <p class="doc-meta">Version 1.0c &nbsp;·&nbsp; March 2026</p>
     <p>The Codex is the document that measures several distinct linguistic abilities. It is organised into three categories: Styles, Registers, Skills. All Doctrines are free to read. Assessments require purchasing a consultation by the OPC.</p>
+    <div class="meta-notation">A phrase followed by <strong>(m)</strong> is a metaphor included for clarity and readability. It carries no literal meaning and creates no obligation, standard, or expectation beyond the definition it accompanies.</div>
   </div>
 
   <div class="nav-card">
@@ -141,6 +155,7 @@ footer { text-align: center; font-size: 0.8em; color: #888; margin: 40px 0 20px;
         <a href="#diplomatic-register" class="placeholder">Diplomatic</a>
         <a href="#academic-register" class="placeholder">Academic</a>
         <a href="#business-register" class="placeholder">Business</a>
+        <a href="#press-register" class="placeholder">Press</a>
       </div>
     </div>
     <div class="nav-category">
@@ -163,7 +178,7 @@ footer { text-align: center; font-size: 0.8em; color: #888; margin: 40px 0 20px;
 
 ```
 <h3 class="section-title">What It Is</h3>
-<p>Victorian English is the style of abstraction and elegance, to convey meaning in such a tone that the reader begins to perceive the subject as timeless. It often uses elevated vocabulary to add weight.</p>
+<p>Victorian English is the style of abstraction and elegance, to convey meaning in such a tone that the reader begins to perceive the subject as timeless. It often uses elevated vocabulary to add Weight.</p>
 
 <h3 class="section-title-irregular">The Structure, <span>as defined</span></h3>
 
@@ -175,22 +190,22 @@ footer { text-align: center; font-size: 0.8em; color: #888; margin: 40px 0 20px;
 
 <div class="structure-point">
   <h4>2. The Delayed Meaning</h4>
-  <p>The Main Subject is introduced early but is starved off the complete reveal towards the end, as it gains momentum from the nested clauses. The delay is introduced before the main verb, not after it.</p>
+  <p>The Main Subject is introduced early but is starved off<span class="metaphor-tag">(m)</span> the complete reveal towards the end, as it gains Momentum from the Nested Clauses. The delay is introduced before the Main Verb, not after it.</p>
 </div>
 
 <div class="structure-point">
   <h4>3. Abstraction As The Definer</h4>
-  <p>The Main Subject gets broken into fragments that define the meaning behind it, adding weight, making the reader visualise it.</p>
+  <p>The Main Subject gets broken into fragments<span class="metaphor-tag">(m)</span> that define the meaning behind it, adding Weight, making the reader visualise it.</p>
 </div>
 
 <div class="structure-point">
   <h4>4. Final Word</h4>
-  <p>The Final Word of the sentence has to be worthy of all the momentum brought upon it. The Final Word is the stamp on the paper.</p>
+  <p>The Final Word of the sentence has to be worthy of all the Momentum brought upon it. The Final Word is the stamp on the paper.<span class="metaphor-tag">(m)</span></p>
 </div>
 
 <div class="structure-point">
   <h4>5. Clause Coordination</h4>
-  <p>Each nest is distinctive; Each nest has its own fragment to express. The nested clauses shall not repeat themselves but rather accumulate as a singular, compounding weight.</p>
+  <p>The Main Subject gets broken into fragments<span class="metaphor-tag">(m)</span>, producing a chain<span class="metaphor-tag">(m)</span> of Nested Clauses that describe the Main Subject in different wordings, all expressing it with abstraction, resulting in the reader feeling the Weight behind the thought.</p>
 </div>
 
 <div class="structure-point">
@@ -199,7 +214,7 @@ footer { text-align: center; font-size: 0.8em; color: #888; margin: 40px 0 20px;
   <div class="semicolonial-uses">
     <div class="semicolonial-use">
       <h5>Use 1 — The Conjunctive Pause</h5>
-      <p>Uses a standard conjunctive adverb inside a Semicolonial Box for weight.</p>
+      <p>Uses a standard conjunctive adverb inside a Semicolonial Box for Weight.</p>
       <div class="example">"; therefore,"</div>
     </div>
     <div class="semicolonial-use">
@@ -209,7 +224,7 @@ footer { text-align: center; font-size: 0.8em; color: #888; margin: 40px 0 20px;
     </div>
     <div class="semicolonial-use">
       <h5>Use 3 — The Isolated Phrase</h5>
-      <p>Places a specific phrase that would have been outside the Box in standard grammar inside it, to have the remainder echo louder.</p>
+      <p>Places a specific phrase that would have been outside the Box in standard grammar inside it, to have the remainder echo louder.<span class="metaphor-tag">(m)</span></p>
       <div class="example">"; yet the wound, remained open"</div>
     </div>
   </div>
@@ -255,16 +270,54 @@ footer { text-align: center; font-size: 0.8em; color: #888; margin: 40px 0 20px;
   <div class="definition-entry">
     <h4>1. "Final Word" — "Heavy"</h4>
     <p>A Final Word is a word that is <strong>lexical</strong>, one that carries standalone meaning without relying on function words such as intensifiers, comparatives, or connectives to complete it.</p>
-    <p>A lexical word can also be an ordinary word in everyday life but has the potential of sounding Heavy if given the right momentum as described in the Structure. An example for a word like "Jurisdiction":</p>
+    <p>A lexical word can also be an ordinary word in everyday life but has the potential of sounding Heavy if given the right Momentum as described in the Structure. An example for a word like "Jurisdiction":</p>
     <blockquote>"The courtroom, filled of paperwork from centuries ago, a verdict on its run, delivered by none other than the Jurisdiction."</blockquote>
   </div>
 
   <div class="definition-entry">
     <h4>2. "Elevated Vocabulary"</h4>
-    <p>Elevated vocabulary refers to words consistent with the literary tradition of Victorian prose, words that carry formal weight without belonging to a specialist domain such as law, medicine, or science.</p>
-    <p>A non-exhaustive reference list is provided in <a href="/codex/appendix-vic">Appendix VIC</a>. Words outside the Appendix are not automatically disqualified. The Assessor evaluates whether the word serves the sentence's weight in a manner consistent with the tradition demonstrated in the Illustrative Examples and Definition 1.</p>
+    <p>Elevated vocabulary refers to words consistent with the literary tradition of Victorian prose, words that carry formal Weight without belonging to a specialist domain such as law, medicine, or science.</p>
+    <p>A non-exhaustive reference list is provided in <a href="/codex/appendix-vic">Appendix VIC</a>. Words outside the Appendix are not automatically disqualified. The Assessor evaluates whether the word serves the sentence's Weight in a manner consistent with the tradition demonstrated in the Illustrative Examples and Definition 1.</p>
   </div>
 
+  <div class="definition-entry">
+    <h4>3. "Qualifier"</h4>
+    <p>A Qualifier that is present is the presence of one of the six subsections in the Structure. A Qualifier is what you look for when evaluating the Victorian English.
+
+  <div class="referenced-terms">
+    <h4>4. Referenced Terms</h4>
+
+    <div class="referenced-term">
+      <strong>Main Subject</strong>
+      <p>The topic the sentence is built around: The entity, concept, or abstraction that the Nested Clauses serve to describe.</p>
+    </div>
+
+    <div class="referenced-term">
+      <strong>Main Verb</strong>
+      <p>The action or state attributed to the Main Subject. Its arrival completes the sentence's primary meaning.</p>
+    </div>
+
+    <div class="referenced-term">
+      <strong>Nest</strong>
+      <p>The singular form of Nested Clauses. Refers to a single clause within the sequence defined in Structure 1.</p>
+    </div>
+
+    <div class="referenced-term">
+      <strong>Momentum</strong>
+      <p>The cumulative effect produced when one or more of the six points from the Structure are present and building toward the Final Word. Not all six are required. A single well-executed Qualifier, consistent with the VIC Doctrine, creates Momentum. The more points present and correctly applied, the greater the Momentum the Final Word receives.</p>
+    </div>
+
+    <div class="referenced-term">
+      <strong>Weight</strong>
+      <p>The result of Momentum meeting a lexical Final Word. Momentum without a lexical Final Word dissipates. A lexical Final Word without Momentum is only a word. Weight is what occurs when both conditions are met simultaneously.</p>
+    </div>
+
+    <div class="referenced-term">
+      <strong>Pacing</strong>
+      <p>The regulation of the reader's cognitive tempo through structural and punctuation choices. Defined in full under the Pacing Doctrine.</p>
+    </div>
+
+  </div>
 </div>
 ```
 
@@ -315,6 +368,12 @@ footer { text-align: center; font-size: 0.8em; color: #888; margin: 40px 0 20px;
   <div class="card placeholder-card" id="business-register">
     <h2 class="doctrine-title">Business Register</h2>
     <div class="doctrine-class">Class: Register &nbsp;·&nbsp; BUS</div>
+    <p class="placeholder-label">Doctrine in preparation.</p>
+  </div>
+
+  <div class="card placeholder-card" id="press-register">
+    <h2 class="doctrine-title">Press Register</h2>
+    <div class="doctrine-class">Class: Register &nbsp;·&nbsp; PRE</div>
     <p class="placeholder-label">Doctrine in preparation.</p>
   </div>
 
